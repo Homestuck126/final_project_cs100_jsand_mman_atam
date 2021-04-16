@@ -6,8 +6,7 @@
 ## Project Description
  > Your project description should summarize the project you are proposing. Be sure to include
  > * Why is it important or interesting to you?
- >   * Games are a prominent part of todays entertainment. With its growing popularity and its increased importance, we thought that it would be vital to at least try our hand at making a game. Most of us already play games, and have accured plenty of experience. Which is why we thought to do this project, we were interested in the process of game making, and so we decided to pool our experience together to see if we could make something cool. 
- >   * Most of us play games, and we though it would have been a fun thing to do.
+ >   * Video games are growing in popularity and importance within society, as computing students with an interest in the area we were interested in developing our own game for this project. This will challenge us to improve our own skills while working as a team, but also give us a greater appreciation for the amount of effort that is invested in the development of the games we enjoy. 
  > * What languages/tools/technologies do you plan to use? (This list may change over the course of the project)
  >   * Language: C++
  >   * [Googletest](https://github.com/google/googletest) - Google's testing suite for checking methods and outputs
