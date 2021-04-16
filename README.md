@@ -14,6 +14,11 @@
  >   * Input: Accept user commands at regular intervals.
  >   * Output: Interactive adventure game with some randomized encounters.
  > * What are the two design patterns you will be using? For each design pattern you must explain in 4-5 sentences:
+ >   * Composite:
+ >     * This pattering will allow us to plan and implement the character objects for both the user and all non-player characters. The characters will need not only attributes associated with classic rpg character such as Damage, Health, and Experience but will also have their own inventory that would manage their equipped and stored items. The composite pattern will allow a graphical hierarchy to be drafted to allow us to better plan and implement the complex nature of the in game characters more effectively by being able to trace and de-conflict methods and variables while also determining relations between different classes of objects.  
+ >   * Abstract Factory:
+ >   
+ >
  >   * Why you picked this pattern and what feature you will implement with it
  >   * What problem you anticipate encountering when implementing your project that you will solve using the design pattern
  >   * Why the chosen design pattern will lead to a good solution to that problem
