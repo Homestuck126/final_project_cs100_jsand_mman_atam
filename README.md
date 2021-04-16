@@ -6,10 +6,12 @@
 ## Project Description
  > Your project description should summarize the project you are proposing. Be sure to include
  > * Why is it important or interesting to you?
- > * Most of us play games, and we though it would have been a fun thing to do.
+ >   * Most of us play games, and we though it would have been a fun thing to do.
  > * What languages/tools/technologies do you plan to use? (This list may change over the course of the project)
- >   * [toolname](link) - Short description
+ >   * [Googletest](https://github.com/google/googletest) - Google's testing suite for checking methods and outputs
  > * What will be the input/output of your project?
+ >   * Input: Accept user commands at regular intervals.
+ >   * Output: Interactive adventure game with some randomized encounters.
  > * What are the two design patterns you will be using? For each design pattern you must explain in 4-5 sentences:
  >   * Why you picked this pattern and what feature you will implement with it
  >   * What problem you anticipate encountering when implementing your project that you will solve using the design pattern
