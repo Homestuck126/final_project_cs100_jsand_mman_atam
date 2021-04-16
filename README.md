@@ -8,6 +8,7 @@
  > * Why is it important or interesting to you?
  >   * Most of us play games, and we though it would have been a fun thing to do.
  > * What languages/tools/technologies do you plan to use? (This list may change over the course of the project)
+ >   * Language: C++
  >   * [Googletest](https://github.com/google/googletest) - Google's testing suite for checking methods and outputs
  > * What will be the input/output of your project?
  >   * Input: Accept user commands at regular intervals.
