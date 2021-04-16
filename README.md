@@ -6,7 +6,7 @@
 ## Project Description
  > Your project description should summarize the project you are proposing. Be sure to include
  > * Why is it important or interesting to you?
- > Most of us play games, and we though it would have been a fun thing to do.
+ > * Most of us play games, and we though it would have been a fun thing to do.
  > * What languages/tools/technologies do you plan to use? (This list may change over the course of the project)
  >   * [toolname](link) - Short description
  > * What will be the input/output of your project?
