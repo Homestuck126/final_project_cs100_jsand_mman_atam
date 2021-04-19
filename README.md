@@ -5,15 +5,15 @@
 
 ## Project Description
  > Your project description should summarize the project you are proposing. Be sure to include
- > * Why is it important or interesting to you?
+ > * Motivation:
  >   * Video games are growing in popularity and importance within society, as computing students with an interest in the area we were interested in developing our own game for this project. This will challenge us to improve our own skills while working as a team and give us a greater appreciation for the amount of effort that is invested in the development of the games we enjoy. 
- > * What languages/tools/technologies do you plan to use? (This list may change over the course of the project)
+ > * Languages and Tools:
  >   * Language: C++
  >   * [Googletest](https://github.com/google/googletest) - Google's testing suite for checking methods and outputs
- > * What will be the input/output of your project?
+ > * Input/Output:
  >   * Input: Accept user commands at regular intervals.
  >   * Output: Interactive adventure game with some randomized encounters.
- > * What are the two design patterns you will be using? For each design pattern you must explain in 4-5 sentences:
+ > * Design Patterns:
  >   * Composite:
  >     * This pattern will allow us to plan and implement the character objects for both the user and all non-player characters. The characters will need not only attributes associated with classic rpg characters such as Damage, Health, and Experience but will also have their own inventory that would manage their equipped and stored items. The composite pattern will allow a graphical hierarchy to be drafted to allow us to better plan and implement the complex nature of the in game characters more effectively by being able to trace and de-conflict methods and variables while also determining relations between different classes of objects.  
  >   * Abstract Factory: 
@@ -23,14 +23,7 @@ provide intersection and union of functionaility because each the factory
 method will allow new characters to be created quickly. These characters or
 enemies will require creation during run-time based on random attributes
 and the factory design method can efficently solve this issue.
- >   
-     
- >   
- >
- >   * Why you picked this pattern and what feature you will implement with it
- >   * What problem you anticipate encountering when implementing your project that you will solve using the design pattern
- >   * Why the chosen design pattern will lead to a good solution to that problem
- > * This description should be in enough detail that the TA/instructor can determine the complexity of the project and if it is sufficient for the team members to complete in the time allotted. 
+
 
  > ## Phase II
  > In addition to completing the "Class Diagram" section below, you will need to 
