@@ -4,7 +4,6 @@
  > Authors: [Justin Sanders](https://github.com/RiotRaider), [Aaron Tam](https://github.com/Homestuck126), and [Melineh Mansour Cheharmohali](https://github.com/melineh025)
 
 ## Project Description
- > Your project description should summarize the project you are proposing. Be sure to include
  > * Motivation:
  >   * Video games are growing in popularity and importance within society, as computing students with an interest in the area we were interested in developing our own game for this project. This will challenge us to improve our own skills while working as a team and give us a greater appreciation for the amount of effort that is invested in the development of the games we enjoy. 
  > * Languages and Tools:
