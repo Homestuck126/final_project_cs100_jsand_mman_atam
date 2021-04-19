@@ -16,7 +16,8 @@
  > * What are the two design patterns you will be using? For each design pattern you must explain in 4-5 sentences:
  >   * Composite:
  >     * This pattern will allow us to plan and implement the character objects for both the user and all non-player characters. The characters will need not only attributes associated with classic rpg characters such as Damage, Health, and Experience but will also have their own inventory that would manage their equipped and stored items. The composite pattern will allow a graphical hierarchy to be drafted to allow us to better plan and implement the complex nature of the in game characters more effectively by being able to trace and de-conflict methods and variables while also determining relations between different classes of objects.  
- >   * Abstract Factory: We will be using abstract factry, for example, to create a variety of
+ >   * Abstract Factory: 
+ >     * We will be using abstract factry, for example, to create a variety of
 enemies that will inherit from one enemy blueprint. Additionally, it will
 provide intersection and union of functionaility because each the factory
 method will allow new characters to be created quickly. These characters or
