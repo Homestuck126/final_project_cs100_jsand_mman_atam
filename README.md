@@ -11,6 +11,8 @@
  > * Languages and Tools:
  >   * Language: C++
  >   * [Googletest](https://github.com/google/googletest) - Google's testing suite for checking methods and outputs
+ >   * Valgrind
+ >   * CMake
  > * Input/Output:
  >   * Input: Accept user commands at regular intervals.
  >   * Output: Interactive adventure game with some randomized encounters.
