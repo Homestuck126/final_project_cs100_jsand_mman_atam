@@ -1,33 +1,27 @@
 
 # Phantomheart
  
- > Authors: [Justin Sanders](https://github.com/RiotRaider), [Aaron Tam](https://github.com/Homestuck126), and [Melineh Mansour Cheharmohali](https://github.com/melineh025)
+  Authors: [Justin Sanders](https://github.com/RiotRaider), [Aaron Tam](https://github.com/Homestuck126), and [Melineh Mansour Cheharmohali](https://github.com/melineh025)
 
 ## Project Description
- > * Theme:
- >   * A Sci-fi/Fantasy Treasure Hunting Adventure
- > * Motivation:
- >   * Video games are growing in popularity and importance within society, as computing students with an interest in the area we were interested in developing our own game for this project. This will challenge us to improve our own skills while working as a team and give us a greater appreciation for the amount of effort that is invested in the development of the games we enjoy. 
- > * Languages and Tools:
- >   * Language: C++
- >   * [Googletest](https://github.com/google/googletest) - Google's testing suite for checking methods and outputs
- >   * Valgrind
- >   * CMake
- > * Input/Output:
- >   * Input: Accept user commands at regular intervals.
- >   * Output: Interactive adventure game with some randomized encounters.
- > * Design Patterns:
- >   * Composite:
- >     * This pattern will allow us to plan and implement the character objects for both the user and all non-player characters. The characters will need not only attributes associated with classic rpg characters such as Damage, Health, and Experience but will also have their own inventory that would manage their equipped and stored items. The composite pattern will allow a graphical hierarchy to be drafted to allow us to better plan and implement the complex nature of the in game characters more effectively by being able to trace and de-conflict methods and variables while also determining relations between different classes of objects.  
- >   * Abstract Factory: 
- >     * We will be using abstract factory, for example, to create a variety of
-enemies that will inherit from one enemy blueprint. Abstract factory will allow
-the game to have a random nature to it, without needing to know the specific 
-attributes of mob enemies. Additionally, it will
-provide intersection and union of functionaility because each the factory
-method will allow new characters to be created quickly. These characters or
-enemies will require creation during run-time based on random attributes
-and the factory design method can efficently solve this issue. 
+  * Theme:
+    * A Sci-fi/Fantasy Treasure Hunting Adventure
+  * Motivation:
+    * Video games are growing in popularity and importance within society, as computing students with an interest in the area we were interested in developing our own game for this project. This will challenge us to improve our own skills while working as a team and give us a greater appreciation for the amount of effort that is invested in the development of the games we enjoy. 
+  * Language:
+    * C++ 
+  * Tools:
+    * [Googletest](https://github.com/google/googletest) - Google's testing suite for checking methods and outputs
+    * Valgrind
+    * CMake
+  * Input/Output:
+    * Input: Accept user commands at regular intervals.
+    * Output: Interactive adventure game with some randomized encounters.
+  * Design Patterns:
+    * Composite:
+       * This pattern will allow us to plan and implement the character objects for both the user and all non-player characters. The characters will need not only attributes associated with classic rpg characters such as Damage, Health, and Experience but will also have their own inventory that would manage their equipped and stored items. The composite pattern will allow a graphical hierarchy to be drafted to allow us to better plan and implement the complex nature of the in game characters more effectively by being able to trace and de-conflict methods and variables while also determining relations between different classes of objects.  
+    * Abstract Factory: 
+      * We will be using abstract factory, for example, to create a variety of enemies that will inherit from one enemy blueprint. Abstract factory will allow the game to have a random nature to it, without needing to know the specific  attributes of mob enemies. Additionally, it will provide intersection and union of functionaility because each the factory method will allow new characters to be created quickly. These characters or enemies will require creation during run-time based on random attributes and the factory design method can efficently solve this issue. 
 
 
  > ## Phase II
