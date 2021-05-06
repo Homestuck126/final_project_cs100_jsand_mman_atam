@@ -43,7 +43,9 @@
 
 ## Map
 ![Map](https://user-images.githubusercontent.com/81594784/117347544-18226c00-ae5e-11eb-99bd-af1ba9561e7a.jpg)
- > *A DESCRIPTION OF THE CLASS AND HOW IT WILL BEHAVE
+ > This is the Tile class UML diagram, the purpose of this is to use a composite strategy so that we can generate the entire map in the map class. We are going to generate the entire map in the Map constructor, and everything will be made in it. We will generate each map tile with four pointers and draw our map in a different diagram so we can picture it. The map will also track the current tile the Character is on, with the Character calling the map for quests. The call for generation of enemies will be in each of the tiles, and the Generate enemy/boss function will determine if there is combat or not. 
+
+
 ## Item/Enemy Generation
  ![Abstract_Weapons01](https://user-images.githubusercontent.com/81594784/117348793-7e5bbe80-ae5f-11eb-8d5f-2c3ef2a7739e.jpg)
 > *A DESCRIPTION OF THE CLASS AND HOW IT WILL BEHAVE
