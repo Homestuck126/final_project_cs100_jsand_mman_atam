@@ -36,8 +36,9 @@
 
 
 
-This is the Tile class UML diagram, the purpose of this is to use a composite strategy so that we can generate the entire map in the map class. We are going to generate the entire map in the Map constructor, and everything will be made in it. The map constructor will be called at the start of the program, and will remain the same throughout the game. We will generate each map tile with four pointers to navigate our character through the map. We will also have a vector of Tile objects in the Map, so that we can organize each Tile with a Quest. The map will also track the current tile the Character is on, returning the current Tile when the Character class/player object asks for it. 
-This object is in a composite strategy but lacks primatives because we are currently at the start of implementation. If we wanted to, we could add a quest Tile and a dungeon Tile to add certain behaviors such as search or interact. Not only that, but if we wanted to add sub-dungeons where one would descend into a different area, we could make a Tile of a map object and apply the Composite strategy. 
+This is the Tile class UML diagram, the purpose of this is to use a composite strategy so that we can generate the entire map in the map class. We are going to generate the entire map in the main, and everything will be made in it. The map constructor will be called at the start of the program, and we would generate each Tile and set their adjacencies, then we would insert them into a Vector so that we can delete and interact with the Tile objects easily. We will generate each Map tile with four pointers to navigate our character through the Map. The Map will also track the current Tile the Character is on, returning the current Tile when the Character class/Player object asks for it. 
+
+This object is in a Composite strategy but lacks primatives because we are currently at the start of implementation. If we wanted to, we could add a quest Tile and a dungeon Tile to add certain behaviors such as search or interact. Not only that, but if we wanted to add sub-dungeons where one would descend into a different area, we could make a Tile of a Map object and apply the Composite strategy. 
 
 ### Item/Enemy Generation
  ![Abstract_Weapons01](https://user-images.githubusercontent.com/81594784/117348793-7e5bbe80-ae5f-11eb-8d5f-2c3ef2a7739e.jpg)
