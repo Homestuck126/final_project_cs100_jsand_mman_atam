@@ -40,8 +40,14 @@ This object is in a Composite strategy but lacks primatives because we are curre
 
 ### Item/Enemy Generation
  ![Abstract_Weapons01](https://user-images.githubusercontent.com/81594784/117348793-7e5bbe80-ae5f-11eb-8d5f-2c3ef2a7739e.jpg)
+ 
 This is the Weapons class UML diagarm which follows the abstract factory design pattern. In this pattern, the abstract factory ignores the details of the concrete classes and focuses on grouping sets of related objects together (weapons, armor). The main interface is responsible for creating the separate factories: Bow, Sword, Fist and these
 factories go onto creating the variety of the weapon such as Glove which is a concrete implementation. The benefit of this pattern is that it will allow future additions to different types of weapons, without having to worry about the details of the concrete classes.
+
+![Abstract_Enemy](https://user-images.githubusercontent.com/74107543/117526236-a1c65c80-af78-11eb-8caa-9f771b068851.png)
+
+The enemy generation also follows the abstract pattern where different types of enemies (bosses, low-level mobs) have a corresponding abstract factory. These abstract factories are responsible for implementing the different variety of bosses, such as the one for each level of the Map. This allows the user to encounter a variety of enemies that have different attributes when they progress through the Tile objects in the Map. Additional concrete classes that implement the factories will be added in the future, where LevelOneBoss is the current one in development. 
+
 
 > ## Phase III
  > You will need to schedule a check-in with the TA (during lab hours or office hours). Your entire team must be present. 
@@ -49,7 +55,8 @@ factories go onto creating the variety of the weapon such as Glove which is a co
  > * In the meeting with your TA you will discuss: 
  >   - How effective your last sprint was (each member should talk about what they did)
  >   - Any tasks that did not get completed last sprint, and how you took them into consideration for this sprint
- >   - Any bugs you've identified and created issues for during the sprint. Do you plan on fixing them in the next sprint or are they lower priority?
+ >   - Any bugs you've ide![Uploading Screenshot (53).png…]()
+ntified and created issues for during the sprint. Do you plan on fixing them in the next sprint or are they lower priority?
  >   - What tasks you are planning for this next sprint.
 
  > ## Final deliverable
