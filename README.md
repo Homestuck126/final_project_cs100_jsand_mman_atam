@@ -40,7 +40,8 @@ This object is in a Composite strategy but lacks primatives because we are curre
 
 ### Item/Enemy Generation
  ![Abstract_Weapons01](https://user-images.githubusercontent.com/81594784/117348793-7e5bbe80-ae5f-11eb-8d5f-2c3ef2a7739e.jpg)
-> *A DESCRIPTION OF THE CLASS AND HOW IT WILL BEHAVE
+This is the Weapons class UML diagarm which follows the abstract factory design pattern. In this pattern, the abstract factory ignores the details of the concrete classes and focuses on grouping sets of related objects together (weapons, armor). The main interface is responsible for creating the separate factories: Bow, Sword, Fist and these
+factories go onto creating the variety of the weapon such as Glove which is a concrete implementation. The benefit of this pattern is that it will allow future additions to different types of weapons, without having to worry about the details of the concrete classes.
 
 > ## Phase III
  > You will need to schedule a check-in with the TA (during lab hours or office hours). Your entire team must be present. 
