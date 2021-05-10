@@ -4,7 +4,7 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events
   push:
-    branches: [ master, all/initial-framework ]
+    branches: [ master, all/initial-framework, jsand155/Character-Class ]
   pull_request:
     branches: [ master, all/initial-framwork ]
 
