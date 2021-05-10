@@ -32,6 +32,3 @@ jobs:
       # Create Test Executables
       - name: Compile Test Executables
         run: make
-      # Run Executables
-      - name: Run Unit Tests
-        run: ./test
