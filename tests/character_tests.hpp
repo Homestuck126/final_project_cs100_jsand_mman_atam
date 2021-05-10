@@ -40,3 +40,4 @@ TEST(Character_Getter_Tests, Input_Level){
 TEST(Character_Getter_Tests, Input_Experience){
     Character* test = new Character(10,100,1);
     EXPECT_EQ(test->getExp(),"0");}
+#endif
