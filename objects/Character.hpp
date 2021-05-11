@@ -3,29 +3,24 @@
 
 class Character {
     public:
-        Character() {   //Default Constructor
-        dmg=0;      //All values default to 0 if not provided
-        maxHP=curHP=0;
-        curXP=0;
-        lvl=0;
-    };
-        Character(int d, int h, int l){ //Non-Default Constructor
-        dmg = d;
-        maxHP = curHP = h;
-        curXP = 0;
-        lvl = l;
-    }; 
-        ~Character();   //Destructor
-        int getDmg(){return dmg;}       //Getter funtion for Damage
-        int getCurHP(){return curHP;}   //Getter funtion for Current Health
-        int getMaxHP(){return maxHP;}   //Getter funtion for Max Health
-        int getLevel(){return lvl;}     //Getter funtion for Level
-        int getExp(){return curXP;}     //Getter funtion for Experience
+        Character(){
+            damage=0;
+            max_HP=0;
+            cur_HP=0;
+            experience=0;
+            level=0;
+        }
+        int getDamage(){return damage;}         //Getter funtion for Damage
+        int getMaxHP(){return max_HP;}          //Getter funtion for Max Health
+        int getCurHP(){return cur_HP;}          //Getter funtion for Current Health
+        int getExperience(){return experience;} //Getter funtion for Experience
+        int getLevel(){return level;}           //Getter funtion for Level
+    
     protected:
-        int dmg;    //Base Damage Stat
-        int maxHP;  //Maximum Health Stat
-        int curHP;  //Current Health Amount
-        int curXP;  //Current Experience Amount
-        int lvl;    //Current Level
+        int damage;     //Base Damage Stat
+        int max_HP;     //Maximum Health Stat
+        int cur_HP;     //Current Health Amount
+        int experience; //Current Experience Amount
+        int level;      //Current Level
 };
 #endif
