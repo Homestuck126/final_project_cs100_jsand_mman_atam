@@ -7,7 +7,7 @@
 
 TEST(Character_Getter_Tests, Default_Damage){
     Character* test = new Character();
-    EXPECT_EQ(test->getDamage(),0);}
+    EXPECT_EQ(test->getDamage(),10);}
 
 TEST(Character_Getter_Tests, Default_Current_Health){
     Character* test = new Character();
