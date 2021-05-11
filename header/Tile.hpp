@@ -4,12 +4,15 @@
 class Tile 
 {
 	private:
-	Tile* left, right ,top ,bottom;
-	string description;
+	Tile* left;
+	Tile* right;
+	Tile* top;
+	Tile* bottom;
+	std::string description;
 	bool enemy,quest;
 	//enemy object
 	public:
-	Tile(string,bool) //enemy object
+	Tile(std::string,bool); //enemy object
 	void getdescription();
 	void setAdj(Tile* ,Tile*, Tile* ,Tile*);
 	~Tile();
