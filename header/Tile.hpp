@@ -12,8 +12,9 @@ class Tile
 	bool enemy,quest;
 	//enemy object
 	public:
+	Tile();
 	Tile(std::string,bool); //enemy object
-	void getdescription();
+	std::string getdescription();
 	void setAdj(Tile* ,Tile*, Tile* ,Tile*);
 	~Tile();
 };
