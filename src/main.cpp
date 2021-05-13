@@ -37,5 +37,6 @@ map->move(input);
 std::cout<<map->getCurrent()->getdescription();
 
 }
+delete map;
 std::cout<<"HELLO WORLD"<<std::endl;	
 }
