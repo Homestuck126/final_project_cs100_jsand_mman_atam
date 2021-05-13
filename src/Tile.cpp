@@ -13,7 +13,6 @@ description = description_input;
 }
 std::string Tile::getdescription()
 {
-	std::cout<<"hi"<<std::endl;
 	return description;
 }
 void Tile::setAdj(Tile* left_input, Tile* right_input , Tile* top_input, Tile* bottom_input)
@@ -23,5 +22,21 @@ right = right_input;
 top = top_input;
 bottom = bottom_input;
 }
+Tile* Tile::getNext(int input)
+{
+if(input == 1)
+return left;
+if(input == 2)
+return right;
+if(input == 3)
+return bottom;
+if(input == 4)
+return top;
 
+}
+Tile::~Tile()
+{
+description="";
+quest =0;
+}
 #endif //__TILE_CPP__

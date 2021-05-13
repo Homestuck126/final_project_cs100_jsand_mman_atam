@@ -3,16 +3,18 @@
 #include <string>
 class Tile 
 {
-	private:
+	protected:
 	Tile* left;
 	Tile* right;
 	Tile* top;
 	Tile* bottom;
+	private: 
 	std::string description;
 	bool enemy,quest;
 	//enemy object
 	public:
 	Tile();
+	Tile* getNext(int);
 	Tile(std::string,bool); //enemy object
 	std::string getdescription();
 	void setAdj(Tile* ,Tile*, Tile* ,Tile*);
