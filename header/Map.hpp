@@ -2,16 +2,18 @@
 #define __MAP_HPP__
 #include "Tile.hpp"
 #include <vector>
+#include <iostream>
 class Map : public Tile
 {
 	private: 
 	Tile* current;
-	vector <Tile> list;
+	std::vector<Tile*> list;
 	public:
-	Map();
+	Map(Tile*);
 	~Map();
-	void move(char a);
+	bool move(char a);
 	Tile* getCurrent();
-	void insertTile();
-}
+	void setLoc(Tile*);
+	void insertTile(Tile*);
+};
 #endif //__MAP_HPP__
