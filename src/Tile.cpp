@@ -29,9 +29,9 @@ return left;
 if(input == 2)
 return right;
 if(input == 3)
-return bottom;
-if(input == 4)
 return top;
+if(input == 4)
+return bottom;
 
 }
 Tile::~Tile()
