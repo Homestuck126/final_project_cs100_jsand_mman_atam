@@ -19,9 +19,9 @@ bool getStatus();
 void toggleStatus();
 Tile* getStart();
 Tile* getEnd();
-void PrintObj();
-void PrintIntro();
-void PrintConclusion();
+std::string PrintObj();
+std::string PrintIntro();
+std::string PrintConclusion();
 };
 
 #endif //__QUEST_HPP__
