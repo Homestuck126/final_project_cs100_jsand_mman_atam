@@ -15,6 +15,7 @@ Tile* Qstart;
 public:
 Quest(std::string, std::string, std::string, Tile*, Tile*);
 ~Quest();
+bool getStatus();
 void toggleStatus();
 Tile* getStart();
 Tile* getEnd();

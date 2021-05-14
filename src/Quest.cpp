@@ -17,6 +17,10 @@ conclude = "";
 Qstart = nullptr;
 Qend = nullptr;
 }
+bool Quest::getStatus()
+{
+return active;
+}
 void Quest::toggleStatus()
 {
 if(active)
