@@ -14,6 +14,7 @@ Quest* getCurrent();
 void addQuest(Quest*);
 void updateQuest();
 std::string checkQuest();
+bool compareQuest(Tile*);
 };
 
 #endif //__QUESTLOG_HPP___

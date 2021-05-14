@@ -33,4 +33,24 @@ std::string QuestLog::checkQuest()
 {
 return quests.at(currQuest)->getObj();
 }
+bool QuestLog::compareQuest(Tile* Tile)
+{
+if(Tile == this->getCurrent()->getEnd())
+{
+        std::cout<<this->getCurrent()->getConclusion()<<std::endl;
+        updateQuest();
+}
+if(this->getCurrent() == nullptr)
+{
+        std::cout<< "good job, you followed simple instructions and won this game, be PROUD, celebrate ,go outside. STOP CODING"<<std::endl;
+        return true;
+}
+//check quest start
+if(Tile == this->getCurrent()->getStart() && this->getCurrent()->getStatus() != true )
+{
+        this->getCurrent()->toggleStatus();
+        std::cout<<this->getCurrent()->getIntro()<<std::endl;
+}
+
+}
 #endif //__QUESTLOG_CPP__

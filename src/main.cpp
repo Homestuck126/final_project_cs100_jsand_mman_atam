@@ -58,29 +58,14 @@ while(input != 'q')
 //print description
 std::cout<<map->getCurrent()->getdescription()<<std::endl;
 //check quest end
-if(map->getCurrent() == quests->getCurrent()->getEnd())
-{
-        std::cout<<quests->getCurrent()->getConclusion()<<std::endl;
-	quests->updateQuest();
-}
-if(quests->getCurrent() == nullptr)
-{
-	std::cout<< "good job, you followed simple instructions and won this game, be PROUD, celebrate ,go outside. STOP CODING"<<std::endl;
-	break; 
-}
-//check quest start
-if(map->getCurrent() == quests->getCurrent()->getStart() && quests->getCurrent()->getStatus() != true )
-{
-	quests->getCurrent()->toggleStatus();
-        std::cout<<quests->getCurrent()->getIntro()<<std::endl;
-}
-//user input
+if(quests->compareQuest(map->getCurrent()))
+break;
 std::cout<< "W to move West, E to move east, N to move North, S to move South"<<std::endl;
 std::cout<< "o to check objective"<<std::endl;
 std::cin>>input;
 //determine user input
 if(input == 'o')
-std::cout<<quests->getCurrent()->getObj()<<std::endl;
+std::cout<<quests->checkQuest()<<std::endl;
 else
 map->move(input);
 std::cout<<"======================================================================================" <<std::endl;
