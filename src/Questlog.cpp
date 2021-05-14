@@ -31,6 +31,6 @@ currQuest = currQuest+1;
 }
 void QuestLog::checkQuest()
 {
-quests.at(currQuest)->PrintObj();
+quests.at(currQuest)->getObj();
 }
 #endif //__QUESTLOG_CPP__
