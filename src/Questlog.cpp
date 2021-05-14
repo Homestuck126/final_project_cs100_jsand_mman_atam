@@ -8,17 +8,22 @@ currQuest =0;
 }
 QuestLog::~QuestLog()
 {
-std::cout<<"hi"<<std::endl;
-delete quests[0];
+//delete everything
+int size = quests.size();
+for(unsigned i=0; i< size; i++)
+	{
+        delete quests.at(i);
+        }
 }
+
+
 Quest* QuestLog::getCurrent()
 {
-return quests[currQuest];
+return quests.at(currQuest);
 }
 void QuestLog::addQuest(Quest* input)
 {
-quests[size] = input;
-size++;
+quests.push_back(input);
 }
 void QuestLog::updateQuest()
 {
@@ -26,6 +31,6 @@ currQuest = currQuest+1;
 }
 void QuestLog::checkQuest()
 {
-quests[currQuest]->PrintObj();
+quests.at(currQuest)->PrintObj();
 }
 #endif //__QUESTLOG_CPP__
