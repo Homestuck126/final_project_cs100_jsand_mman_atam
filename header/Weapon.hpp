@@ -1,7 +1,7 @@
 #ifndef __WEAPON_HPP
 #define __WEAPON_HPP
 
-#include "GearFactory.hpp"
+#include "../header/GearFactory.hpp"
 class Weapon {
         protected:
                 double attackDamage;

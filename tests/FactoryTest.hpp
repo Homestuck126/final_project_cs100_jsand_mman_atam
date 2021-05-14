@@ -4,12 +4,17 @@
 
 
 #include "gtest/gtest.h"
-#include "GearFactory.hpp"
+#include "../header/GearFactory.hpp"
+#include "../header/AbstractFactory/ElfFactory.hpp"
+
+
+
+
 
 TEST(ElfGearCreation, CheckName)  {
 
 	GearFactory *gearByClass;
-	gearByClass = new ElfGearFactory();
+	gearByClass = new ElfFactory();
 
 	Weapon *firstWeapon = gearByClass->createWeapon();
 	Armor *firstArmor = gearByClass->createArmor();

@@ -1,6 +1,12 @@
 #ifndef __ORCFACTORY_HPP__
 #define __ORCFACTORY_HPP__
 
+
+
+
+#include "../header/GearFactory.hpp"
+
+
 class OrcFactory(): public GearFactory {
 
         public:
