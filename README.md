@@ -27,7 +27,7 @@
 ## Class Diagram
  
 ### Character/Quest/Inventory
-![Character](https://user-images.githubusercontent.com/81594784/117518253-e55a9f80-af53-11eb-9543-02b3092c6391.jpg)
+![Composite (1)](https://user-images.githubusercontent.com/81594784/118337335-6c65c580-b4c8-11eb-936c-4e44c1b12dcc.jpg)
 
 
 
