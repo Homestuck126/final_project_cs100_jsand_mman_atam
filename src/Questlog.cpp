@@ -29,8 +29,8 @@ void QuestLog::updateQuest()
 {
 currQuest = currQuest+1;
 }
-void QuestLog::checkQuest()
+std::string QuestLog::checkQuest()
 {
-quests.at(currQuest)->getObj();
+return quests.at(currQuest)->getObj();
 }
 #endif //__QUESTLOG_CPP__

@@ -13,7 +13,7 @@ QuestLog();
 Quest* getCurrent();
 void addQuest(Quest*);
 void updateQuest();
-void checkQuest();
+std::string checkQuest();
 };
 
 #endif //__QUESTLOG_HPP___
