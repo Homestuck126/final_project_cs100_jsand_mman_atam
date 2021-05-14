@@ -1,6 +1,6 @@
 #ifndef __CHARACTER_HPP_
 #define __CHARACTER_HPP_
-#include "../mockClasses/mockInventory.hpp"
+#include "Inventory.hpp"
 class Character {
     public:
         Character(){
@@ -12,7 +12,7 @@ class Character {
             level=0;
         }
         ~Character(){delete pack;}
-        int getDamage(){return (damage+pack->getWeapon());}         //Getter funtion for Damage
+        int getDamage(){return (damage/*+pack->getWeaponDmg()*/);}         //Getter funtion for Damage
         int getMaxHP(){return max_HP;}          //Getter funtion for Max Health
         int getCurHP(){return cur_HP;}          //Getter funtion for Current Health
         int getExperience(){return experience;} //Getter funtion for Experience
