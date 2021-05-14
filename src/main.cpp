@@ -60,7 +60,7 @@ std::cout<<map->getCurrent()->getdescription()<<std::endl;
 //check quest end
 if(map->getCurrent() == quests->getCurrent()->getEnd())
 {
-        quests->getCurrent()->PrintConclusion();
+        std::cout<<quests->getCurrent()->getConclusion()<<std::endl;
 	quests->updateQuest();
 }
 if(quests->getCurrent() == nullptr)
@@ -72,15 +72,15 @@ if(quests->getCurrent() == nullptr)
 if(map->getCurrent() == quests->getCurrent()->getStart() && quests->getCurrent()->getStatus() != true )
 {
 	quests->getCurrent()->toggleStatus();
-        quests->getCurrent()->PrintIntro();
+        std::cout<<quests->getCurrent()->getIntro()<<std::endl;
 }
 //user input
-std::cout<< "l to move left, r to move right, u to move up, d to move down"<<std::endl;
+std::cout<< "W to move West, E to move east, N to move North, S to move South"<<std::endl;
 std::cout<< "o to check objective"<<std::endl;
 std::cin>>input;
 //determine user input
 if(input == 'o')
-quests->getCurrent()->PrintObj();
+std::cout<<quests->getCurrent()->getObj()<<std::endl;
 else
 map->move(input);
 std::cout<<"======================================================================================" <<std::endl;

@@ -36,17 +36,17 @@ Tile* Quest::getEnd()
 {
 return Qend;
 }
-void Quest::PrintObj()
+std::string Quest::getObj()
 {
-std::cout<<objective<<std::endl;
+return objective;
 }
-void Quest::PrintIntro()
+std::string Quest::getIntro()
 {
-std::cout<<intro<<std::endl;
+return intro;
 }
-void Quest::PrintConclusion()
+std::string Quest::getConclusion()
 {
-std::cout<<conclude<<std::endl;
+return conclude;
 }
 
 #endif //__QUEST_CPP__
