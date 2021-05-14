@@ -12,6 +12,8 @@ ADD_EXECUTABLE(Game
 src/main.cpp 
 src/Tile.cpp
 src/Map.cpp
+src/Quest.cpp
+src/Questlog.cpp
 )
 
 TARGET_LINK_LIBRARIES(test gtest)
