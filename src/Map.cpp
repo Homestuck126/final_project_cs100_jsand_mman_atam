@@ -20,13 +20,13 @@ bool move = false;
 //bool flag to check if moved
 	int in = 0; 
 //inout validation
-	if(input == 'l' || input == 'L')
+	if(input == 'W' || input == 'w')
 	in =1;
-        if(input == 'r' || input == 'R')
+        if(input == 'E' || input == 'E')
 	in =2;
-        if(input == 'd' || input == 'D')
+        if(input == 's' || input == 'S')
 	in =3;
-        if(input == 't' || input == 'T')
+        if(input == 'N' || input == 'n')
 	in =4;
 
 //movement
