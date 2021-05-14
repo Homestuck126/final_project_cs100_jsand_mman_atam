@@ -1,12 +1,12 @@
 #ifndef __QUESTLOG_HPP__
 #define __QUESTLOG_HPP__
 #include "Quest.hpp"
+#include <vector>
 class QuestLog 
 {
 private:
-Quest** quests;
+std::vector<Quest*> quests;
 int currQuest;
-int size;
 public:
 QuestLog();
 ~QuestLog();
