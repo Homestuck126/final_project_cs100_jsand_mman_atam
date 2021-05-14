@@ -24,9 +24,9 @@ bool move = false;
 	in =1;
         if(input == 'E' || input == 'E')
 	in =2;
-        if(input == 's' || input == 'S')
+        if(input == 'n' || input == 'N')
 	in =3;
-        if(input == 'N' || input == 'n')
+        if(input == 's' || input == 'S')
 	in =4;
 
 //movement
