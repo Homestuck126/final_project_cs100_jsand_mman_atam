@@ -1,7 +1,7 @@
 #ifndef __QUEST_CPP__
 #define __QUEST_CPP__
 #include "../header/Quest.hpp"
-Quest::Quest(std::string Obj, std::string start, std::string comp, Tile* startTile, Tile* endTile)
+Quest::Quest(std::string start, std::string Obj, std::string comp, Tile* startTile, Tile* endTile)
 {
 objective = Obj;
 intro = start;
