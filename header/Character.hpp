@@ -8,7 +8,7 @@ class Character {
             damage=dmg+(lvl*3);
             max_HP=HP+(lvl*5);
             cur_HP=max_HP;
-            experience=10*lvl;
+            experience=10*(lvl+1);
             level=lvl;
         }
         ~Character(){delete pack;}
