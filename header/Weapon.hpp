@@ -4,11 +4,11 @@
 #include "../header/GearFactory.hpp"
 class Weapon {
         protected:
-                double attackDamage;
-                double attackSpeed;
-                std::string name;
+                //double attackDamage;
+               //double attackSpeed;
+               string name;
         public:
-                virtusl ~Weapon(){};
+                virtual ~Weapon(){};
                 virtual std::string getName() const = 0;
 };
 

@@ -2,17 +2,21 @@
 #define __ELFFACTORY_HPP__
 
 
-#include "../header/GearFactory.hpp"
+//#include "GearFactory.hpp"
+#include "/home/csmajs/mmans025/final-project-jsand155_atam032_mmans025/header/GearFactory.hpp"
 
-class ElfFactory(): public GearFactory {
+#include "/home/csmajs/mmans025/final-project-jsand155_atam032_mmans025/header/ConcreteWeapons/Bow.hpp"
+
+class ElfFactory: public GearFactory {
 
 	public:
 		Weapon* createWeapon() {
-			return new Bow();
+			Bow* newBow = new Bow();
+			return newBow;
 		}
 
 		Armor * createArmor() {
-			return new Light();
+			return new LightArmor();
 		}
 
 };
