@@ -1,6 +1,7 @@
 #include "gtest/gtest.h"
 
 #include "character_tests.hpp"
+#include "inventory_tests.hpp"
 
 int main(int argc, char **argv) {
 	::testing::InitGoogleTest(&argc, argv);
