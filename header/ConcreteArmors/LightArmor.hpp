@@ -1,14 +1,19 @@
 #ifndef __LIGHTARMOR_HPP__
 #define __LIGHTARMOR_HPP__
-
-#include "Armor.hpp"
+#include "/home/csmajs/mmans025/final-project-jsand155_atam032_mmans025/header/Armor.hpp"
+#include <string>
 
 class LightArmor : public Armor {
-
+	
+	private:
+		std::string name;
 	public:
-		std::string getName() {return "LightArmor"};
+		LightArmor() {
+			this->name = "LightArmor";
+		}
+		std::string getName() {return name;};
 
-}
+};
 
 
 

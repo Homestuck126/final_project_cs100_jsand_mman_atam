@@ -2,11 +2,13 @@
 #define __WEAPON_HPP
 
 #include "../header/GearFactory.hpp"
+#include <string>
+
 class Weapon {
         protected:
                 //double attackDamage;
                //double attackSpeed;
-               string name;
+               std::string name;
         public:
                 virtual ~Weapon(){};
                 virtual std::string getName() const = 0;

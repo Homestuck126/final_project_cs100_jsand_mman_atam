@@ -7,6 +7,8 @@
 
 #include "/home/csmajs/mmans025/final-project-jsand155_atam032_mmans025/header/ConcreteWeapons/Bow.hpp"
 
+#include "/home/csmajs/mmans025/final-project-jsand155_atam032_mmans025/header/ConcreteArmors/LightArmor.hpp"
+
 class ElfFactory: public GearFactory {
 
 	public:
@@ -16,7 +18,8 @@ class ElfFactory: public GearFactory {
 		}
 
 		Armor * createArmor() {
-			return new LightArmor();
+			Armor* newArmor =  new LightArmor();
+			return newArmor;
 		}
 
 };

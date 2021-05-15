@@ -6,13 +6,12 @@
 #include "/home/csmajs/mmans025/final-project-jsand155_atam032_mmans025/header/Weapon.hpp"
 
 
-
 class Bow : public Weapon {
 	private:
-		string name;
+		std::string name;
 	public:
 		Bow() {
-		 	name = "Bow";
+		 	this->name = "Bow";
 		}
 
 		std::string getName() {
@@ -21,7 +20,7 @@ class Bow : public Weapon {
 		}
 
 
-}
+};
 
 
 
