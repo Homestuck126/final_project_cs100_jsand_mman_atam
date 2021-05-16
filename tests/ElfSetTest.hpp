@@ -1,5 +1,5 @@
-#ifndef __FACTORYTEST_HPP__
-#define __FACTORYTEST_HPP__
+#ifndef __ELFSETTEST_HPP__
+#define __ELFSETTEST_HPP__
 
 
 

@@ -1,5 +1,6 @@
 #include "gtest/gtest.h"
-#include "FactoryTest.hpp"
+#include "ElfSetTest.hpp"
+#include "OrcSetTest.hpp"
 
 int main(int argc, char **argv) {
 	::testing::InitGoogleTest(&argc, argv);
