@@ -20,7 +20,7 @@ TEST(ElfGearCreation, CheckName)  {
 	Armor *firstArmor = gearByClass->createArmor();
 
 	
-	EXPECT_EQ{firstWeapon->getName(), "Bow";}
+	EXPECT_EQ(firstWeapon->getName(), "Bow");
 }
 
 

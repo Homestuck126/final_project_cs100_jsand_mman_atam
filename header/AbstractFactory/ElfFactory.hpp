@@ -12,12 +12,12 @@
 class ElfFactory: public GearFactory {
 
 	public:
-		Weapon* createWeapon() {
+		Weapon* createWeapon() const override {
 			Bow* newBow = new Bow();
 			return newBow;
 		}
 
-		Armor * createArmor() {
+		Armor * createArmor() const override{
 			Armor* newArmor =  new LightArmor();
 			return newArmor;
 		}

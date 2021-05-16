@@ -14,7 +14,7 @@ class Bow : public Weapon {
 		 	this->name = "Bow";
 		}
 
-		std::string getName() {
+		std::string getName() const override {
 			return name;
 		 	
 		}

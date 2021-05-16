@@ -11,7 +11,7 @@ class LightArmor : public Armor {
 		LightArmor() {
 			this->name = "LightArmor";
 		}
-		std::string getName() {return name;};
+		std::string getName() const override {return name;};
 
 };
 
