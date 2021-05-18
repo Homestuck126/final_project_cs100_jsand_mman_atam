@@ -9,7 +9,7 @@ private:
 std::string intro;
 std::string conclude;
 std::string objective;
-bool active;
+bool active = false;
 Tile* Qend;
 Tile* Qstart;
 public:
