@@ -2,7 +2,8 @@
 #define __INVENTORY_HPP_
 #include<iostream>
 #include<iomanip>
-#include"../mock/Mock_Equipment.hpp"
+#include"../Weapon.hpp"
+#include "../Armor.hpp"
 
 class Inventory {
     private:
