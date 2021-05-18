@@ -14,11 +14,13 @@ class OrcFactory: public GearFactory {
 
         public:
                 Weapon* createWeapon() const override {
-                        return new Axe();
+			Axe * newAxe = new Axe();
+                        return newAxe;
                 }
 
                 Armor * createArmor() const override  {
-                        return new HeavyArmor();
+			HeavyArmor* newArmor = new HeavyArmor();
+                        return  newArmor;
                 }
 
 };

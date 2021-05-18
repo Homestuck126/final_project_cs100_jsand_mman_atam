@@ -8,9 +8,11 @@ class Armor {
                // double healthIncrease;
                // double resistance;
                 std::string name;
+		int healthInc;
         public:
                 virtual ~Armor() {};
                 virtual std::string getName () const = 0;
+		virtual int getHealth () const = 0;
 
 
 

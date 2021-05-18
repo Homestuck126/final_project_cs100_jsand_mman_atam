@@ -7,12 +7,14 @@ class LightArmor : public Armor {
 	
 	private:
 		std::string name;
+		int healthInc;
 	public:
 		LightArmor() {
 			this->name = "LightArmor";
+			this->healthInc = 10;
 		}
-		std::string getName() const override {return name;};
-
+		std::string getName() const override {return name;}
+		int getHealth() const override {return healthInc;}
 };
 
 

@@ -6,12 +6,12 @@
 
 class Weapon {
         protected:
-                //double attackDamage;
-               //double attackSpeed;
                std::string name;
+	       int attackDamage;
         public:
                 virtual ~Weapon(){};
                 virtual std::string getName() const = 0;
+		virtual int getAttackDmg() const = 0;
 };
 
 #endif
