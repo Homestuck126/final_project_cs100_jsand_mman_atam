@@ -2,11 +2,11 @@
 #define __ORCFACTORY_HPP__
 
 
-#include "/home/csmajs/mmans025/final-project-jsand155_atam032_mmans025/header/GearFactory.hpp"
+#include "GearFactory.hpp"
 
-#include "/home/csmajs/mmans025/final-project-jsand155_atam032_mmans025/header/ConcreteWeapons/Axe.hpp"
+#include "ConcreteObjects/ConcreteWeapons/Axe.hpp"
 
-#include "/home/csmajs/mmans025/final-project-jsand155_atam032_mmans025/header/ConcreteArmors/HeavyArmor.hpp"
+#include "ConcreteObjects/ConcreteArmors/HeavyArmor.hpp"
 
 
 

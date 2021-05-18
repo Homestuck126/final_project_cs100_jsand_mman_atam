@@ -2,12 +2,11 @@
 #define __ELFFACTORY_HPP__
 
 
-#include "../GearFactory.hpp"
-//#include "/home/csmajs/mmans025/final-project-jsand155_atam032_mmans025/header/GearFactory.hpp"
+#include "GearFactory.hpp"
 
-#include "/home/csmajs/mmans025/final-project-jsand155_atam032_mmans025/header/ConcreteWeapons/Bow.hpp"
+#include "ConcreteObjects/ConcreteWeapons/Bow.hpp"
 
-#include "/home/csmajs/mmans025/final-project-jsand155_atam032_mmans025/header/ConcreteArmors/LightArmor.hpp"
+#include "ConcreteObjects/ConcreteArmors/LightArmor.hpp"
 
 class ElfFactory: public GearFactory {
 
