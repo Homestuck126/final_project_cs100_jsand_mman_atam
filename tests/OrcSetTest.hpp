@@ -2,7 +2,7 @@
 #define __ORCSETTEST_HPP__
 
 #include "gtest/gtest.h"
-#include "../header/GearFactory.hpp"
+#include "../header/AbstractFactory/GearFactory.hpp"
 #include "../header/AbstractFactory/OrcFactory.hpp"
 
 TEST(OrcSet, CheckWeaponName) {
