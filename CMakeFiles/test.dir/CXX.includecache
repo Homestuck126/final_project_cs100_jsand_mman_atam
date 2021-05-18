@@ -14,12 +14,34 @@
 /home/csmajs/mmans025/final-project-jsand155_atam032_mmans025/header/ConcreteArmors/LightArmor.hpp
 -
 
+/home/csmajs/mmans025/final-project-jsand155_atam032_mmans025/header/AbstractFactory/OrcFactory.hpp
+/home/csmajs/mmans025/final-project-jsand155_atam032_mmans025/header/GearFactory.hpp
+-
+/home/csmajs/mmans025/final-project-jsand155_atam032_mmans025/header/ConcreteWeapons/Axe.hpp
+-
+/home/csmajs/mmans025/final-project-jsand155_atam032_mmans025/header/ConcreteArmors/HeavyArmor.hpp
+-
+
 /home/csmajs/mmans025/final-project-jsand155_atam032_mmans025/header/Armor.hpp
+string
+-
+
+/home/csmajs/mmans025/final-project-jsand155_atam032_mmans025/header/ConcreteArmors/HeavyArmor.hpp
+/home/csmajs/mmans025/final-project-jsand155_atam032_mmans025/header/Armor.hpp
+-
 string
 -
 
 /home/csmajs/mmans025/final-project-jsand155_atam032_mmans025/header/ConcreteArmors/LightArmor.hpp
 /home/csmajs/mmans025/final-project-jsand155_atam032_mmans025/header/Armor.hpp
+-
+string
+-
+
+/home/csmajs/mmans025/final-project-jsand155_atam032_mmans025/header/ConcreteWeapons/Axe.hpp
+/home/csmajs/mmans025/final-project-jsand155_atam032_mmans025/header/GearFactory.hpp
+-
+/home/csmajs/mmans025/final-project-jsand155_atam032_mmans025/header/Weapon.hpp
 -
 string
 -
@@ -44,7 +66,7 @@ Weapon.hpp
 string
 -
 
-/home/csmajs/mmans025/final-project-jsand155_atam032_mmans025/tests/FactoryTest.hpp
+/home/csmajs/mmans025/final-project-jsand155_atam032_mmans025/tests/ElfSetTest.hpp
 gtest/gtest.h
 /home/csmajs/mmans025/final-project-jsand155_atam032_mmans025/tests/gtest/gtest.h
 ../header/GearFactory.hpp
@@ -52,11 +74,21 @@ gtest/gtest.h
 ../header/AbstractFactory/ElfFactory.hpp
 /home/csmajs/mmans025/final-project-jsand155_atam032_mmans025/header/AbstractFactory/ElfFactory.hpp
 
+/home/csmajs/mmans025/final-project-jsand155_atam032_mmans025/tests/OrcSetTest.hpp
+gtest/gtest.h
+/home/csmajs/mmans025/final-project-jsand155_atam032_mmans025/tests/gtest/gtest.h
+../header/GearFactory.hpp
+/home/csmajs/mmans025/final-project-jsand155_atam032_mmans025/header/GearFactory.hpp
+../header/AbstractFactory/OrcFactory.hpp
+/home/csmajs/mmans025/final-project-jsand155_atam032_mmans025/header/AbstractFactory/OrcFactory.hpp
+
 /home/csmajs/mmans025/final-project-jsand155_atam032_mmans025/tests/unit_test.cpp
 gtest/gtest.h
 /home/csmajs/mmans025/final-project-jsand155_atam032_mmans025/tests/gtest/gtest.h
-FactoryTest.hpp
-/home/csmajs/mmans025/final-project-jsand155_atam032_mmans025/tests/FactoryTest.hpp
+ElfSetTest.hpp
+/home/csmajs/mmans025/final-project-jsand155_atam032_mmans025/tests/ElfSetTest.hpp
+OrcSetTest.hpp
+/home/csmajs/mmans025/final-project-jsand155_atam032_mmans025/tests/OrcSetTest.hpp
 
 googletest/googletest/include/gtest/gtest-death-test.h
 gtest/internal/gtest-death-test-internal.h

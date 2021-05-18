@@ -3,12 +3,16 @@
 
 CMakeFiles/test.dir/tests/unit_test.cpp.o
  /home/csmajs/mmans025/final-project-jsand155_atam032_mmans025/header/AbstractFactory/ElfFactory.hpp
+ /home/csmajs/mmans025/final-project-jsand155_atam032_mmans025/header/AbstractFactory/OrcFactory.hpp
  /home/csmajs/mmans025/final-project-jsand155_atam032_mmans025/header/Armor.hpp
+ /home/csmajs/mmans025/final-project-jsand155_atam032_mmans025/header/ConcreteArmors/HeavyArmor.hpp
  /home/csmajs/mmans025/final-project-jsand155_atam032_mmans025/header/ConcreteArmors/LightArmor.hpp
+ /home/csmajs/mmans025/final-project-jsand155_atam032_mmans025/header/ConcreteWeapons/Axe.hpp
  /home/csmajs/mmans025/final-project-jsand155_atam032_mmans025/header/ConcreteWeapons/Bow.hpp
  /home/csmajs/mmans025/final-project-jsand155_atam032_mmans025/header/GearFactory.hpp
  /home/csmajs/mmans025/final-project-jsand155_atam032_mmans025/header/Weapon.hpp
- /home/csmajs/mmans025/final-project-jsand155_atam032_mmans025/tests/FactoryTest.hpp
+ /home/csmajs/mmans025/final-project-jsand155_atam032_mmans025/tests/ElfSetTest.hpp
+ /home/csmajs/mmans025/final-project-jsand155_atam032_mmans025/tests/OrcSetTest.hpp
  /home/csmajs/mmans025/final-project-jsand155_atam032_mmans025/tests/unit_test.cpp
  googletest/googletest/include/gtest/gtest-death-test.h
  googletest/googletest/include/gtest/gtest-matchers.h
