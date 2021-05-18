@@ -32,6 +32,31 @@ TEST(ElfGearCreation, CheckArmorName) {
 
 }
 
+TEST(ElfGearCreation, CheckWeaponStat) {
+
+	GearFactory *gearByClass;
+	gearByClass = new ElfFactory();
+	
+	Weapon *firstWeapon = gearByClass->createWeapon();
+
+	EXPECT_EQ(firstWeapon->getAttackDmg(), 10);
+
+}
+
+TEST(ElfGearCreation, CheckArmorStat) {
+
+        GearFactory *gearByClass;
+        gearByClass = new ElfFactory();
+
+        Armor *firstArmor = gearByClass->createArmor();
+
+        EXPECT_EQ(firstArmor->getHealth(), 10);
+
+
+
+
+}
+
 
 
 #endif

@@ -27,5 +27,25 @@ TEST(OrcSet, CheckArmorName) {
 
 }
 
+TEST(OrcSet, CheckWeaponStat) {
+
+	GearFactory *gearByClass;
+	gearByClass = new OrcFactory();
+
+	Weapon *orcWeapon = gearByClass->createWeapon();
+	EXPECT_EQ(orcWeapon->getAttackDmg(), 7);
+}
+
+TEST(OrcSet, CheckArmorStat) {
+
+        GearFactory *gearByClass;
+        gearByClass = new OrcFactory();
+
+        Armor * newArmor  = gearByClass->createArmor();
+        EXPECT_EQ(newArmor->getHealth(), 15);
+
+
+}
+
 
 #endif
