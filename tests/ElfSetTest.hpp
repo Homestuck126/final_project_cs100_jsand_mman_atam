@@ -5,11 +5,6 @@
 
 #include "gtest/gtest.h"
 #include "../header/AbstractFactory/GearFactory.hpp"
-#include "../header/AbstractFactory/ElfFactory.hpp"
-
-
-
-
 
 TEST(ElfGearCreation, CheckWeaponName)  {
 
