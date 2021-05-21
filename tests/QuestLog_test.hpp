@@ -43,6 +43,46 @@ Questlog->updateQuest();
         delete test2;
         delete Questlog;
 }
+TEST(QuestLogTest, QuestLogcompareQuest) {
+        Tile* test1 = new Tile();
+        Tile* test2 = new Tile();
+	Tile* test3 = new Tile();
+    Quest* Quests1 = new Quest("hi1" , "hi2" , "hi3" ,test1, test2 );
+    Quest* Quests2 = new Quest("hi1" , "hi2" , "hi3" ,test2, test3 );
+        QuestLog* Questlog = new QuestLog();
+Questlog->addQuest(Quests1);
+Questlog->addQuest(Quests2);
+Questlog->compareQuest(test2);
+    EXPECT_EQ(Questlog->getCurrent(), Quests2 );
+        delete test1;
+        delete test2;
+        delete Questlog;
+}
+TEST(QuestLogTest, QuestLogcompareQuestSTART) {
+	QuestLog* Questlog = new QuestLog();
+        Tile* test1 = new Tile();
+        Tile* test2 = new Tile();
+	Quest* Quests1 = new Quest("hi1" , "hi2" , "hi3" ,test1, test2 );
+	Questlog->addQuest(Quests1);
+	EXPECT_FALSE(Questlog->compareQuest(test1));
+	delete test1;
+        delete test2;
+        delete Questlog;
+
+};
+TEST(QuestLogTest, QuestLogcompareQuestEND) {
+        QuestLog* Questlog = new QuestLog();
+        Tile* test1 = new Tile();
+        Tile* test2 = new Tile();
+        Quest* Quests1 = new Quest("hi1" , "hi2" , "hi3" ,test1, test2 );
+        Questlog->addQuest(Quests1);
+        EXPECT_TRUE(Questlog->compareQuest(test2));
+	delete test1;
+        delete test2;
+        delete Questlog;
+
+};
+
 
 
 

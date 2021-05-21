@@ -19,6 +19,10 @@ for(unsigned i=0; i< size; i++)
 
 Quest* QuestLog::getCurrent()
 {
+if(quests.size()<=currQuest)
+{
+	return nullptr;
+}
 return quests.at(currQuest);
 }
 void QuestLog::addQuest(Quest* input)
