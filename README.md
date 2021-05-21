@@ -40,10 +40,19 @@ This is the Map class UML diagram, the purpose of this is to create a relationsh
 This is the Quest class UML digram, the purpose of this is to create a relationship where Questlog contains Quests. We are once again going to gnerate the entire Questlog in the main, and everything will be made in a generate function there. Every Quest will then be generated and inserted into Questlog to allow for easy deletion and interaction. Each Quest will be generated with 2 Tile pointers so that Questlog can communicate with Map and determine when quests are active and when they will start and end. The Questlog will be the main thing to tell the player what to do to win the game. 
 ### Abstract Factory Pattern:
 
- ![Abstract_Weapons01](https://user-images.githubusercontent.com/81594784/117348793-7e5bbe80-ae5f-11eb-8d5f-2c3ef2a7739e.jpg)
-#### Item Generation
-This is the Weapons class UML diagarm which follows the abstract factory design pattern. In this pattern, the abstract factory ignores the details of the concrete classes and focuses on grouping sets of related objects together (weapons, armor). The main interface is responsible for creating the separate factories: Bow, Sword, Fist and these
-factories go onto creating the variety of the weapon such as Glove which is a concrete implementation. The benefit of this pattern is that it will allow future additions to different types of weapons, without having to worry about the details of the concrete classes.
+
+This is the Tile class UML diagram, the purpose of this is to use a composite strategy so that we can generate the entire map in the map class. We are going to generate the entire map in the main, and everything will be made in it. The map constructor will be called at the start of the program, and we would generate each Tile and set their adjacencies, then we would insert them into a Vector so that we can delete and interact with the Tile objects easily. We will generate each Map tile with four pointers to navigate our character through the Map. The Map will also track the current Tile the Character is on, returning the current Tile when the Player object asks for it. 
+
+This object is in a Composite strategy but lacks primatives because we are currently at the start of implementation. If we wanted to, we could add a quest Tile and a dungeon Tile to add certain behaviors such as search or interact. Not only that, but if we wanted to add sub-dungeons where one would descend into a different area, we could make a Tile of a Map object and apply the Composite strategy. 
+
+### Item Genereation for different Classes
+ ![Item Generation for Elf and Orc](https://user-images.githubusercontent.com/74107543/118266718-d43bf200-b46f-11eb-8268-1bd1bd61bf3f.png)
+ 
+ Item generation for different classes such as Elf and Orc, require specific sets of armor and weapons suited to them. This diagram shows the interface that GearFactory provides, such as createWeapon(), allows different factories to be made. These factories are then responsible for creating the correct sets of armor and weapon for each class. For example, and Elf class will get a Bow as a weapon and LightArmor. Another is that an Orc will always recieve an Axe as a weapon and HeavyArmor. It is easy to add an extra class such as Human() but will be much more difficult for a new concrete class to be added, such as +createMount(). 
+
+ 
+
+
 
 ![Abstract_Enemy](https://user-images.githubusercontent.com/74107543/117526236-a1c65c80-af78-11eb-8caa-9f771b068851.png)
 
