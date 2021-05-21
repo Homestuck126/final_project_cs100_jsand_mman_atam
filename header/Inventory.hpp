@@ -2,8 +2,8 @@
 #define __INVENTORY_HPP_
 #include<iostream>
 #include<iomanip>
-#include"../Weapon.hpp"
-#include "../Armor.hpp"
+#include"AbstractFactory/Weapon.hpp"
+#include "AbstractFactory/Armor.hpp"
 
 class Inventory {
     private:
@@ -12,7 +12,7 @@ class Inventory {
         int numHealingItems;
     public:
         Inventory(Weapon* wpn, Armor* arm){
-             weapon=wpn;
+            weapon=wpn;
             armor=arm;
             numHealingItems=0;
             }
@@ -26,8 +26,8 @@ class Inventory {
             delete armor;
             }
         int getHealing(){return numHealingItems;}
-        int getWeaponVal(){return weapon->getValue();}
-        int getArmorVal(){return armor->getValue();}
+        int getWeaponVal(){return weapon->getAttackDmg();}
+        int getArmorVal(){return armor->getHealth();}
         Weapon* getWeapon(){return weapon;}
         Armor* getArmor(){return armor;}
         void setWeapon(Weapon* wpn){
@@ -50,9 +50,9 @@ class Inventory {
 
         void printInventory(){
             std::cout<<"Weapon: " << weapon->getName()<< std::endl
-            <<"\tDamage: " << weapon->getValue()<< std::endl;
+            <<"\tDamage: " << weapon->getAttackDmg()<< std::endl;
              std::cout<<"Armor: " << armor->getName()<< std::endl
-            <<"\tHealth Increase: " << armor->getValue()<< std::endl;
+            <<"\tHealth Increase: " << armor->getHealth()<< std::endl;
             std::cout << "Health Potions: " << numHealingItems << std::endl; 
         }
         
