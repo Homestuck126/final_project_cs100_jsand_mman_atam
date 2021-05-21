@@ -27,17 +27,17 @@
 ## Class Diagram
  
 ### Composite Pattern:
-![Composite (2)](https://user-images.githubusercontent.com/81594784/118377030-4dc30580-b580-11eb-8f93-6a5fc4c4a063.jpg)
+![Composite (2)](https://user-images.githubusercontent.com/60371257/119062673-3cb53280-b98c-11eb-9409-56968923abad.png)
+
 #### Character/Inventory/Quests
 
 
  There will be a base class "Character" that is contains an Inventory object. This Inventory object will serve as a directory and management object containing complex Weapon and Armor objects as well as counters for how many "simple" items it has. From the Character, a more complex Player object will be derived, while all other characters will utilize the original Character Class. External to the Character, there will be a QuestLog object that is composed of and manages multiple Quest objects, each of which containing the relevant information for initiating, progressing, and completing in game objectives.
 #### Map
 
-This is the Map class UML diagram, the purpose of this is to create a relationship where Map contains Tile. We are going to generate the entire map in the main, and everything will be made in a generate function there. The map and Tile constructors will be called at the start of the program, and we would generate each Tile and set their adjacencies, then we would insert them into map so that we can delete and interact with the Tile objects easily. We will generate each Map tile with four pointers to navigate our character through the Map. The Map will also track the current Tile the Character is on, returning the current Tile when the Player object asks for it. 
+This is the Map class UML diagram, the purpose of this is to create a relationship where Map contains Tile. We are going to generate the entire map in the main, and everything will be made in a generate function there. The map and Tile constructors will be called at the start of the program, and we would generate each Tile and set their adjacencies, then we would insert them into map so that we can delete and interact with the Tile objects easily. We will generate each Map tile with four pointers to navigate our character through the Map. The Map will also track the current Tile the Character is on, returning the current Tile when the Player object asks for it. This map is a composite structure because it allows the Map to be consistent of not only Tile objects but also Map objects. This will allow for maps with sub maps. 
 
-#### Quest
-This is the Quest class UML digram, the purpose of this is to create a relationship where Questlog contains Quests. We are once again going to gnerate the entire Questlog in the main, and everything will be made in a generate function there. Every Quest will then be generated and inserted into Questlog to allow for easy deletion and interaction. Each Quest will be generated with 2 Tile pointers so that Questlog can communicate with Map and determine when quests are active and when they will start and end. The Questlog will be the main thing to tell the player what to do to win the game. 
+
 ### Abstract Factory Pattern:
 
 
@@ -58,6 +58,12 @@ This object is in a Composite strategy but lacks primatives because we are curre
 
 The enemy generation also follows the abstract pattern where different types of enemies (bosses, low-level mobs) have a corresponding abstract factory. These abstract factories are responsible for implementing the different variety of bosses, such as the one for each level of the Map. This allows the user to encounter a variety of enemies that have different attributes when they progress through the Tile objects in the Map. Additional concrete classes that implement the factories will be added in the future, where LevelOneBoss is the current one in development. 
 
+### No pattern
+
+![Untitled Diagram](https://user-images.githubusercontent.com/60371257/119062742-5bb3c480-b98c-11eb-8e15-206452975ee9.png)
+
+#### Quest
+This is the Quest class UML digram, the purpose of this is to create a relationship where Questlog contains Quests. We are once again going to gnerate the entire Questlog in the main, and everything will be made in a generate function there. Every Quest will then be generated and inserted into Questlog to allow for easy deletion and interaction. Each Quest will be generated with 2 Tile pointers so that Questlog can communicate with Map and determine when quests are active and when they will start and end. The Questlog will be the main thing to tell the player what to do to win the game. 
 
 > ## Phase III
  > You will need to schedule a check-in with the TA (during lab hours or office hours). Your entire team must be present. 
