@@ -3,7 +3,7 @@
 
 #include "gtest/gtest.h"
 
-#include "../src/Map/Tile.cpp"
+#include "../header/Map/Tile.hpp"
 
 TEST(TileTest, Tiledescription) {
     Tile* test = new Tile("hi" ,1);

@@ -6,7 +6,10 @@ ADD_SUBDIRECTORY(googletest)
 
 ADD_EXECUTABLE(test 
 tests/unit_test.cpp
-
+src/Map/Tile.cpp
+src/Map/Map.cpp
+src/Quest/Quest.cpp
+src/Quest/Questlog.cpp
 )
 ADD_EXECUTABLE(Game 
 src/main.cpp 

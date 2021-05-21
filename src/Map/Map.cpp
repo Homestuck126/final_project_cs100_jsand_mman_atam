@@ -53,7 +53,9 @@ bool move = false;
         }
 	//if didn't move 
 	if (move == false)
+	{
 	std::cout<<"invalid input"<<std::endl;
+	}
 	//return
 	return move;
 
