@@ -1,4 +1,4 @@
-#ifndef __Map_HPP__
+#ifndef __MAP_HPP__
 #define __MAP_HPP__
 #include "Tile.hpp"
 #include <vector>

@@ -3,7 +3,7 @@
 
 #include "gtest/gtest.h"
 
-#include "../src/Quest/Questlog.cpp"
+#include "../header/Quest/Questlog.hpp"
 
 TEST(QuestLogTest, QuestLoggetCurrent) {
         Tile* test1 = new Tile();
@@ -57,7 +57,7 @@ Questlog->compareQuest(test2);
         delete test1;
         delete test2;
         delete Questlog;
-}
+};
 TEST(QuestLogTest, QuestLogcompareQuestSTART) {
 	QuestLog* Questlog = new QuestLog();
         Tile* test1 = new Tile();
