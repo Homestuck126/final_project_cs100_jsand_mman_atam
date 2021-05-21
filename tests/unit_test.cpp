@@ -2,7 +2,7 @@
 #include "ElfSetTest.hpp"
 #include "OrcSetTest.hpp"
 
-//#include "character_tests.hpp"
+#include "character_tests.hpp"
 //#include "inventory_tests.hpp"
 
 //#include "Tile_test.hpp"

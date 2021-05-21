@@ -19,7 +19,7 @@ class Character {
         int getExperience(){return experience;}                 //Getter funtion for Experience
         int getLevel(){return level;}                           //Getter funtion for Level
         int takeDamage(int incoming){
-            cur_HP-=incoming;
+            cur_HP-=(incoming-pack->getArmorVal());
             if(cur_HP<=0){
                 cur_HP=0;
             }
