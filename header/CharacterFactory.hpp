@@ -36,3 +36,6 @@ class CharacterFactory {
 			}
 			
 };
+
+
+#endif
