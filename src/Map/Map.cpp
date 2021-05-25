@@ -19,7 +19,7 @@ bool Map::move(int input)
 bool move = false;
 //bool flag to check if moved
 
-//inout validation
+//input validation
 int in = input;
 //movement
 	if(in==1 && current->getNext(1) !=nullptr)
