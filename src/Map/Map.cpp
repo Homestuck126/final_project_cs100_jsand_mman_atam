@@ -14,21 +14,13 @@ for(unsigned i=0; i< size; i++)
 	delete list.at(i);
 }
 }
-bool Map::move(char input)
+bool Map::move(int input)
 {
 bool move = false;
 //bool flag to check if moved
-	int in = 0; 
-//inout validation
-	if(input == 'W' || input == 'w')
-	in =1;
-        if(input == 'E' || input == 'E')
-	in =2;
-        if(input == 'n' || input == 'N')
-	in =3;
-        if(input == 's' || input == 'S')
-	in =4;
 
+//input validation
+int in = input;
 //movement
 	if(in==1 && current->getNext(1) !=nullptr)
 	{
@@ -54,7 +46,7 @@ bool move = false;
 	//if didn't move 
 	if (move == false)
 	{
-	std::cout<<"invalid input"<<std::endl;
+	std::cout<<"You cannot go that way."<<std::endl;
 	}
 	//return
 	return move;

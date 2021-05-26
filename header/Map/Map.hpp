@@ -11,7 +11,7 @@ class Map : public Tile
 	public:
 	Map(Tile*);
 	~Map();
-	bool move(char a);
+	bool move(int);
 	Tile* getCurrent();
 	void setLoc(Tile*);
 	void insertTile(Tile*);
