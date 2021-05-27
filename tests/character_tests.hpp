@@ -147,9 +147,18 @@ TEST(Character_Name_Tests, No_Name){
     delete test;
 }
 
+TEST(Character_Name_Tests, Set_Name){
+    Character* test = new Character(new Bow(), new HeavyArmor(), 20, 100, 1);
+    test->setName("Roger Dodger");
+    EXPECT_EQ(test->getName(),"Roger Dodger");
+    delete test;
+}
 
-
-
-
-
+TEST(Character_Name_Tests, Set_New_Name){
+    Character* test = new Character(new Bow(), new HeavyArmor(), 20, 100, 1);
+    test->setName("Roger Dodger");
+    test->setName("Steve Rogers");
+    EXPECT_EQ(test->getName(),"Steve Rogers");
+    delete test;
+}
 #endif
