@@ -41,12 +41,6 @@ TEST(Generate_Enemy_Tests, Generate_Race1_Stat5){
         delete test;
         delete fact;}
 
-TEST(Generate_Enemy_Tests, Generate_Race1_Stat6){
-        CharacterFactory* fact=new CharacterFactory();
-        Character* test = fact->getEnemy(0);
-        EXPECT_EQ(test->getLevel(), 0);
-	delete test;
-	delete fact;}
 TEST(Generate_Enemy_Tests, Generate_Race2_Stat1){
         CharacterFactory* fact=new CharacterFactory();
         Character* test = fact->getEnemy(1);
@@ -81,14 +75,6 @@ TEST(Generate_Enemy_Tests, Generate_Race2_Stat5){
         EXPECT_EQ(test->getExperience(), 10);;
         delete test;
         delete fact;}
-
-TEST(Generate_Enemy_Tests, Generate_Race2_Stat6){
-        CharacterFactory* fact=new CharacterFactory();
-        Character* test = fact->getEnemy(1);
-        EXPECT_EQ(test->getLevel(), 0);
-        delete test;
-        delete fact;}
-
 
 
 
