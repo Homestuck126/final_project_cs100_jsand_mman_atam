@@ -39,7 +39,7 @@ class ElfFactory: public GearFactory {
 					newArm = new ConcreteA4();
                                         break;
                                 case 1:
-					newArm = new ConcreteA2();
+					newArm = new ConcreteA1();
                                         break;
                         }
 			return newArm;
@@ -69,7 +69,7 @@ class OrcFactory: public GearFactory {
 					newArm = new ConcreteA3();
                                         break;
                                 case 1:
-					newArm = new ConcreteA1();
+					newArm = new ConcreteA2();
                                         break;
                         }
                         return newArm;
