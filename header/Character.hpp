@@ -4,23 +4,26 @@
 #include "Inventory.hpp"
 class Character {
     public:
-        Character(Weapon* wpn, Armor* arm, int dmg, int HP, int lvl){
+       Character(){
+	   name="";
+	   pack=nullptr;
+	   damage=max_HP=cur_HP=experience=0;
+	} 
+       Character(Weapon* wpn, Armor* arm, int dmg, int HP, int exp){
             name="";
 	    pack= new Inventory(wpn, arm);
-            damage=dmg+(lvl*3);
-            max_HP=HP+(lvl*5);
+            damage=dmg;
+            max_HP=HP;
             cur_HP=max_HP;
-            experience=10*(lvl+1);
-	    level = lvl;
+            experience=exp;
         }
-	Character(std::string n, Weapon* wpn, Armor* arm, int dmg, int HP, int lvl){
+	Character(std::string n, Weapon* wpn, Armor* arm, int dmg, int HP, int exp){
             name=n;
             pack= new Inventory(wpn, arm);
-            damage=dmg+(lvl*3);
-            max_HP=HP+(lvl*5);
+            damage=dmg;
+            max_HP=HP;
             cur_HP=max_HP;
-            experience=10*(lvl+1);
-            level=lvl;	
+            experience=exp;	
 	}
         ~Character(){delete pack;}
         void setName(std::string n){name = n;} 	//Set name of Character post construction
@@ -30,7 +33,6 @@ class Character {
         int getMaxHP(){return max_HP;}                          //Getter funtion for Max Health
         int getCurHP(){return cur_HP;}                          //Getter funtion for Current Health
         int getExperience(){return experience;}                 //Getter funtion for Experience
-        int getLevel(){return level;}                           //Getter funtion for Level
         int takeDamage(int incoming){
             cur_HP-=(incoming-pack->getArmorVal());
             if(cur_HP<=0){
@@ -46,10 +48,11 @@ class Character {
         int max_HP;         //Maximum Health Stat
         int cur_HP;         //Current Health Amount
         int experience;     //Current Experience Amount
-        int level;          //Current Level
 };
 
 class Player : public Character {
+    private:
+	int level;
     public:
 	Player(std::string n, Weapon* wpn, Armor* arm, int dmg, int HP){
 		name=n;
@@ -60,6 +63,7 @@ class Player : public Character {
 		pack = new Inventory(wpn, arm, 5);
 	}
 	~Player(){delete pack;}
+	int getLevel(){return level;}	//returns level of Player Character
 	void Heal(){	//Used to heal character using healing item from inventory
 		if(pack->getHealing()>=1){
 			cur_HP+=20;
@@ -68,7 +72,7 @@ class Player : public Character {
 			}
 			pack->changeHealing(-1);
 			std::cout<< "Healed!!!\nCurrent Health is now: " << cur_HP <<"\\" <<max_HP <<std::endl;
-			std::cout<< pack->getHealing()<< " Health Items Remaining\n\n"
+			std::cout<< pack->getHealing()<< " Health Items Remaining\n\n";
 		}
 		else{
 			std::cout<<"No Health Items Available!!!"<<std::endl;
