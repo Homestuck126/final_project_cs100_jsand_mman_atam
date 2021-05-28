@@ -90,7 +90,90 @@ TEST(Generate_Enemy_Tests, Generate_Race2_Name){
         delete test;
         delete fact;}
 
+TEST(Player_Factory_Tests, Standard_Damage){
+	 CharacterFactory* fact=new CharacterFactory();
+        Player* test = fact->getPlayer("Explorer Dan",0);
+        EXPECT_EQ(test->getDamage(),24);
+        delete test;
+        delete fact;}
 
+TEST(Player_Factory_Testing, Standard_Protection){
+         CharacterFactory* fact=new CharacterFactory();
+        Player* test = fact->getPlayer("Explorer Dan",0);
+        EXPECT_EQ(test->getProtection(),6);
+        delete test;
+        delete fact;}
+
+TEST(Player_Factory_Testing, Standard_Health){
+         CharacterFactory* fact=new CharacterFactory();
+        Player* test = fact->getPlayer("Explorer Dan",0);
+        EXPECT_EQ(test->getMaxHP(),120);
+        delete test;
+        delete fact;}
+
+TEST(Player_Factory_Testing, Standard_Name){
+         CharacterFactory* fact=new CharacterFactory();
+        Player* test = fact->getPlayer("Explorer Dan",0);
+        EXPECT_EQ(test->getName(),"Explorer Dan");
+        delete test;
+        delete fact;}
+
+
+TEST(Player_Factory_Tests, Sniper_Damage){
+         CharacterFactory* fact=new CharacterFactory();
+        Player* test = fact->getPlayer("Ranger Rick",1);
+        EXPECT_EQ(test->getDamage(),42);
+        delete test;
+        delete fact;}
+
+TEST(Player_Factory_Testing, Sniper_Protection){
+         CharacterFactory* fact=new CharacterFactory();
+        Player* test = fact->getPlayer("Ranger Rick",1);
+        EXPECT_EQ(test->getProtection(),2);
+        delete test;
+        delete fact;}
+
+TEST(Player_Factory_Testing, Sniper_Health){
+         CharacterFactory* fact=new CharacterFactory();
+        Player* test = fact->getPlayer("Ranger Rick",1);
+        EXPECT_EQ(test->getMaxHP(),80);
+        delete test;
+        delete fact;}
+
+TEST(Player_Factory_Testing, Sniper_Name){
+         CharacterFactory* fact=new CharacterFactory();
+        Player* test = fact->getPlayer("Ranger Rick",1);
+        EXPECT_EQ(test->getName(),"Ranger Rick");
+        delete test;
+        delete fact;}
+
+TEST(Player_Factory_Tests,Tank_Damage){
+         CharacterFactory* fact=new CharacterFactory();
+        Player* test = fact->getPlayer("Officer Steve",2);
+        EXPECT_EQ(test->getDamage(),11);
+        delete test;
+        delete fact;}
+
+TEST(Player_Factory_Testing, Tank_Protection){
+         CharacterFactory* fact=new CharacterFactory();
+        Player* test = fact->getPlayer("Officer Steve",2);
+        EXPECT_EQ(test->getProtection(),8);
+        delete test;
+        delete fact;}
+
+TEST(Player_Factory_Testing, Tank_Health){
+         CharacterFactory* fact=new CharacterFactory();
+        Player* test = fact->getPlayer("Officer Steve",2);
+        EXPECT_EQ(test->getMaxHP(),160);
+        delete test;
+        delete fact;}
+
+TEST(Player_Factory_Testing, Tank_Name){
+         CharacterFactory* fact=new CharacterFactory();
+        Player* test = fact->getPlayer("Officer Steve",2);
+        EXPECT_EQ(test->getName(),"Officer Steve");
+        delete test;
+        delete fact;}
 
 
 #endif
