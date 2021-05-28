@@ -1,6 +1,10 @@
 #ifndef __MAP_CPP__
 #define __MAP_CPP__
 #include "../../header/Map/Map.hpp"
+Map::Map()
+{
+	
+}
 Map::Map(Tile* input)
 {
 current = input;
