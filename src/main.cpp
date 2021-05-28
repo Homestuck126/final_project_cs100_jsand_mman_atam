@@ -7,22 +7,22 @@
 
 int main()
 {
-Map* map = nullptr;
-QuestLog* quests = nullptr;
+Map* map = new Map();
+QuestLog* quests = new QuestLog();
 initialization* generation = new initialization(map,quests);
-char input = ' ';
-while(input != 'q')
+int input = 0;
+while(input != '6')
 {
 //print description
 std::cout<<map->getCurrent()->getdescription()<<std::endl;
 //check quest end
 if(quests->compareQuest(map->getCurrent()))
 break;
-std::cout<< "W to move West, E to move east, N to move North, S to move South"<<std::endl;
-std::cout<< "o to check objective"<<std::endl;
+std::cout<< "1 to move West, 2 to move east, 3 to move North, 4 to move South"<<std::endl;
+std::cout<< "5 to check objective"<<std::endl;
 std::cin>>input;
 //determine user input
-if(input == 'o')
+if(input == '5')
 std::cout<<quests->checkQuest()<<std::endl;
 else
 map->move(input);

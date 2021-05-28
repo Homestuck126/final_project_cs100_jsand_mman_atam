@@ -55,6 +55,6 @@ if(Tile == this->getCurrent()->getStart() && this->getCurrent()->getStatus() != 
         this->getCurrent()->toggleStatus();
         std::cout<<this->getCurrent()->getIntro()<<std::endl;
 }
-
+return false;
 }
 #endif //__QUESTLOG_CPP__
