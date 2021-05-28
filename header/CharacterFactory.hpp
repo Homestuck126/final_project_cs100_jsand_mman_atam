@@ -51,7 +51,7 @@ class CharacterFactory {
 					break;
 				case 1: player=new Player(n, new StarterW2(), new StarterA2(), 30, 80);
 					break;
-				case 2: player=new Player(n, new StarterW3(), new StarterA3(), 88888888, 160);
+				case 2: player=new Player(n, new StarterW3(), new StarterA3(), 8, 160);
 					break;
 				}		
 			return player;
