@@ -12,7 +12,7 @@ TEST(ElfGearCreation, CheckWeaponName)  {
 	gearByClass = new ElfFactory();
 
 	Weapon *firstWeapon = gearByClass->createWeapon(0);	
-	EXPECT_EQ(firstWeapon->getName(), "Bow");
+	EXPECT_EQ(firstWeapon->getName(), "Light Caster");
 }
 
 TEST(ElfGearCreation, CheckArmorName) {
@@ -22,7 +22,7 @@ TEST(ElfGearCreation, CheckArmorName) {
 
 	Armor *firstArmor = gearByClass->createArmor(0);
 
-	EXPECT_EQ(firstArmor->getName(), "LightArmor");
+	EXPECT_EQ(firstArmor->getName(), "Light Camouflage Armor");
 
 
 }
@@ -45,7 +45,7 @@ TEST(ElfGearCreation, CheckArmorStat) {
 
         Armor *firstArmor = gearByClass->createArmor(0);
 
-        EXPECT_EQ(firstArmor->getProt(), 10);
+        EXPECT_EQ(firstArmor->getProt(), 3);
 
 
 

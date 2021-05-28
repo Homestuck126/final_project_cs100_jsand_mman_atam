@@ -23,7 +23,7 @@ TEST(Inventory_Tests,_WeaponVal){
     Weapon* wpn = new ConcreteW1();
     Armor* arm = new ConcreteA1();
     Inventory* test = new Inventory(wpn,arm);
-    EXPECT_EQ(test->getWeaponVal(),10);}
+    EXPECT_EQ(test->getWeaponVal(),7);}
 
 TEST(Inventory_Tests,ArmorVal){
     Weapon* wpn = new ConcreteW1();

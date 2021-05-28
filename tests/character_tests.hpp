@@ -19,7 +19,7 @@ TEST(Character_Getter_Tests, CharacterProtection){
     Weapon* wpn = new ConcreteW1();
     Armor* arm = new ConcreteA3();
     Character* test = new Character("",wpn,arm,50,200,0);
-    EXPECT_EQ(test->getProtection(),15);
+    EXPECT_EQ(test->getProtection(),13);
     delete test;
 }
 
@@ -52,7 +52,7 @@ TEST(Character_Damage_Tests, Take_Damage_Light){
     Armor* arm = new ConcreteA3();
     Character* test = new Character("",wpn,arm,50,200,0);
     test->takeDamage(30);
-    EXPECT_EQ(test->getCurHP(),180);
+    EXPECT_EQ(test->getCurHP(),183);
     delete test;
 }
 
@@ -61,7 +61,7 @@ TEST(Character_Damage_Tests, Take_Damage_Medium){
     Armor* arm = new ConcreteA3();
     Character* test = new Character("",wpn,arm,50,200,0);
     test->takeDamage(70);
-    EXPECT_EQ(test->getCurHP(),145);
+    EXPECT_EQ(test->getCurHP(),143);
     delete test;
 }
 
@@ -70,7 +70,7 @@ TEST(Character_Damage_Tests, Take_Damage_Heavy){
     Armor* arm = new ConcreteA3();
     Character* test = new Character("",wpn,arm,50,200,0);
     test->takeDamage(150);
-    EXPECT_EQ(test->getCurHP(),60);
+    EXPECT_EQ(test->getCurHP(),63);
     delete test;
 }
 
@@ -148,7 +148,7 @@ TEST(Player_Health_Tests, Partial_Heal){
         Player* test= new Player("John Smith", new ConcreteW1(), new ConcreteA1(), 20, 100);
         test->takeDamage(50);
 	test->Heal();
-        EXPECT_EQ(test->getCurHP(),85);
+        EXPECT_EQ(test->getCurHP(),82);
         delete test;}
 
 TEST(Player_Health_Tests, Insufficient_Heal){
@@ -160,7 +160,7 @@ TEST(Player_Health_Tests, Insufficient_Heal){
         test->Heal();
         test->Heal();
         test->Heal();
-        EXPECT_EQ(test->getCurHP(),115);
+        EXPECT_EQ(test->getCurHP(),112);
         delete test;}
 
 TEST(Player_Health_Tests, Add_Heal){
@@ -168,8 +168,8 @@ TEST(Player_Health_Tests, Add_Heal){
         test->takeDamage(35);
         test->addHeal(10);
         test->Heal();
-        EXPECT_EQ(test->getCurHP(),200);
-        delete test;}
+        EXPECT_EQ(test->getCurHP(),97);
+	delete test;}
 
 TEST(Player_Reequip_Tests, Change_Weapon){
         Player* test= new Player("John Smith", new ConcreteW1(), new ConcreteA1(), 20, 10);
@@ -180,7 +180,7 @@ TEST(Player_Reequip_Tests, Change_Weapon){
 TEST(Player_Reequip_Tests, Change_Armor){
         Player* test= new Player("John Smith", new ConcreteW1(), new ConcreteA1(), 20, 10);
         test->swapArmor(new ConcreteA2());
-        EXPECT_EQ(test->getProtection(),12);
+        EXPECT_EQ(test->getProtection(),7);
         delete test;}
 
 
