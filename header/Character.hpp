@@ -40,7 +40,6 @@ class Character {
             }
             return cur_HP;
         }
-
 	protected:
 	//Data Members 
 	std::string name;   //Character's Name
@@ -86,15 +85,11 @@ class Player : public Character {
 		std::cout << pack->getWeapon()->getName()<< " discarded!" << std::endl <<std::endl;
 	
 		pack->setWeapon(wpn);
-	
-		std::cout << pack->getWeapon()->getName()<< " equipped!" << std::endl <<std::endl;
-		}
+	}
 	void swapArmor(Armor* arm){  //Replace equipped armor with new armor
                 std::cout << pack->getArmor()->getName()<< " discarded!" << std::endl <<std::endl;
 
                 pack->setArmor(arm);
-
-                std::cout << pack->getArmor()->getName()<< " equipped!" << std::endl <<std::endl;
 	}
 	void addHeal(int amt){	      //Used to increase the number of healing items in player inventory
 		pack->changeHealing(amt);

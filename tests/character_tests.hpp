@@ -163,4 +163,25 @@ TEST(Player_Health_Tests, Insufficient_Heal){
         EXPECT_EQ(test->getCurHP(),115);
         delete test;}
 
+TEST(Player_Health_Tests, Add_Heal){
+        Player* test= new Player("John Smith", new Axe(), new HeavyArmor(), 20, 200);
+        test->takeDamage(35);
+        test->addHeal(10);
+        test->Heal();
+        EXPECT_EQ(test->getCurHP(),200);
+        delete test;}
+
+TEST(Player_Reequip_Tests, Change_Weapon){
+        Player* test= new Player("John Smith", new Axe(), new HeavyArmor(), 20, 10);
+        test->swapWeapon(new Bow());
+	EXPECT_EQ(test->getDamage(),30);
+        delete test;}
+
+TEST(Player_Reequip_Tests, Change_Armor){
+        Player* test= new Player("John Smith", new Axe(), new HeavyArmor(), 20, 10);
+        test->swapArmor(new LightArmor());
+        EXPECT_EQ(test->getProtection(),10);
+        delete test;}
+
+
 #endif
