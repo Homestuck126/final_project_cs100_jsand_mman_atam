@@ -11,7 +11,7 @@ Map* map = new Map();
 QuestLog* quests = new QuestLog();
 initialization* generation = new initialization(map,quests);
 int input = 0;
-while(input != '6')
+while(input != 6)
 {
 //print description
 std::cout<<map->getCurrent()->getdescription()<<std::endl;
