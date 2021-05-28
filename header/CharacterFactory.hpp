@@ -1,8 +1,9 @@
 #ifndef __CHARACTER_FACTORY_HPP_
 #define __CHARACTER_FACTORY_HPP_
 
-
+#include <string>
 #include "AbstractFactory/GearFactory.hpp"
+#include "StarterGear.hpp"
 #include "Character.hpp"
 
 class CharacterFactory {
@@ -34,7 +35,18 @@ class CharacterFactory {
 				}
 			return enemy;
 			}
-			
+		Player* getPlayer(std::string n, int x){
+			Player* player;
+			switch(x){
+				case 0:	player=new Player(n, new StarterW1(), new StarterA1(), 15, 120);
+					break;
+				case 1: player=new Player(n, new StarterW2(), new StarterA2(), 30, 80);
+					break;
+				case 2: player=new Player(n, new StarterW3(), new StarterA3(), 5, 160);
+					break;
+				}		
+			return player;
+		}	
 };
 
 
