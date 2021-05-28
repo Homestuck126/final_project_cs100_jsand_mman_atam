@@ -29,7 +29,8 @@
 ## Class Diagram
  
 ### Composite Pattern:
-![Composite (4)](https://user-images.githubusercontent.com/81594784/119906198-9bd1f480-bf02-11eb-9c1b-63ab37cb22ef.jpg)
+![Composite (5)](https://user-images.githubusercontent.com/81594784/119922875-89b57d80-bf25-11eb-93f1-10203a9e9203.jpg)
+
 
 
 #### Character/Inventory/Quests
