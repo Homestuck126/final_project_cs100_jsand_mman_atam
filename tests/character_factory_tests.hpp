@@ -100,7 +100,7 @@ TEST(Player_Factory_Tests, Standard_Damage){
 TEST(Player_Factory_Testing, Standard_Protection){
          CharacterFactory* fact=new CharacterFactory();
         Player* test = fact->getPlayer("Explorer Dan",0);
-        EXPECT_EQ(test->getProtection(),6);
+        EXPECT_EQ(test->getProtection(),8);
         delete test;
         delete fact;}
 
@@ -129,7 +129,7 @@ TEST(Player_Factory_Tests, Sniper_Damage){
 TEST(Player_Factory_Testing, Sniper_Protection){
          CharacterFactory* fact=new CharacterFactory();
         Player* test = fact->getPlayer("Ranger Rick",1);
-        EXPECT_EQ(test->getProtection(),2);
+        EXPECT_EQ(test->getProtection(),4);
         delete test;
         delete fact;}
 
@@ -157,7 +157,7 @@ TEST(Player_Factory_Tests,Tank_Damage){
 TEST(Player_Factory_Testing, Tank_Protection){
          CharacterFactory* fact=new CharacterFactory();
         Player* test = fact->getPlayer("Officer Steve",2);
-        EXPECT_EQ(test->getProtection(),8);
+        EXPECT_EQ(test->getProtection(),10);
         delete test;
         delete fact;}
 
