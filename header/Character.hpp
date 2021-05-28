@@ -78,10 +78,10 @@ class Player : public Character {
 				}
 				pack->changeHealing(-1);
 				std::cout<< "Healed!!!\nCurrent Health is now: " << cur_HP <<"\\" <<max_HP <<std::endl;
-				std::cout<< pack->getHealing()<< " Health Items Remaining\n\n";
+				std::cout<< pack->getHealing()<< " Health Kits Remaining\n\n";
 			}
 			else{
-				std::cout<<"No Health Items Available!!!"<<std::endl;
+				std::cout<<"No Health Kits Available!!!"<<std::endl;
 			}
 		}		
 	}

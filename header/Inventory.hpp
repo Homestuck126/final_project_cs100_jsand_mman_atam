@@ -27,7 +27,7 @@ class Inventory {
             }
         int getHealing(){return numHealingItems;}
         int getWeaponVal(){return weapon->getAttackDmg();}
-        int getArmorVal(){return armor->getHealth();}
+        int getArmorVal(){return armor->getProt();}
         Weapon* getWeapon(){return weapon;}
         Armor* getArmor(){return armor;}
         void setWeapon(Weapon* wpn){
@@ -52,8 +52,8 @@ class Inventory {
             std::cout<<"Weapon: " << weapon->getName()<< std::endl
             <<"\tDamage: " << weapon->getAttackDmg()<< std::endl;
              std::cout<<"Armor: " << armor->getName()<< std::endl
-            <<"\tHealth Increase: " << armor->getHealth()<< std::endl;
-            std::cout << "Health Potions: " << numHealingItems << std::endl; 
+            <<"\tDamage Reduction: " << armor->getProt()<< std::endl;
+            std::cout << "Health Kits: " << numHealingItems << std::endl; 
         }
         
 };
