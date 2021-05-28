@@ -180,7 +180,7 @@ TEST(Player_Reequip_Tests, Change_Weapon){
 TEST(Player_Reequip_Tests, Change_Armor){
         Player* test= new Player("John Smith", new Axe(), new HeavyArmor(), 20, 10);
         test->swapArmor(new LightArmor());
-        EXPECT_EQ(test->getProtection(),10);
+        EXPECT_EQ(test->getProtection(),12);
         delete test;}
 
 

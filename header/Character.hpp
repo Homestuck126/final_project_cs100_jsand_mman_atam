@@ -29,7 +29,7 @@ class Character {
         void setName(std::string n){name = n;} 	//Set name of Character post construction
 	std::string getName(){return name;}	//Getter for Character name
 	int getDamage(){return (damage+pack->getWeaponVal());}  //Getter funtion for Damage
-        int getProtection(){return pack->getArmorVal();}        //Getter for Armor Damage Reduction
+        virtual int getProtection(){return pack->getArmorVal();}        //Getter for Armor Damage Reduction
         int getMaxHP(){return max_HP;}                          //Getter funtion for Max Health
         int getCurHP(){return cur_HP;}                          //Getter funtion for Current Health
         int getExperience(){return experience;}                 //Getter funtion for Experience
@@ -63,6 +63,10 @@ class Player : public Character {
 		pack = new Inventory(wpn, arm, 5);
 	}
 	int getLevel(){return level;}	//returns level of Player Character
+	int getProtection(){
+		int prot = level*2;
+		prot+=pack->getArmorVal();	
+		return prot;}        //Getter for Armor Damage Reduction
 	void Heal(){	//Used to heal character using healing item from inventory
 		if(cur_HP==max_HP){
 			std::cout << "You have no wounds to heal\n\n";
@@ -98,7 +102,12 @@ class Player : public Character {
 		experience += xp;
 		while(experience>=50*level){
 			experience-=(level*50);
-			std::cout<<"Congratulations! " << name << " is now level " << ++level << std::endl;
+			damage+=(damage/10);
+			max_HP+=(5*level);
+			cur_HP=max_HP;
+			std::cout<<"Congratulations! " << name << " is now level " << ++level << std::endl
+					<<"All stats increase\n"
+					<<"Health is fully restored\n";
 			}
 		}
 };
