@@ -22,8 +22,13 @@ std::cout<< "1 to move West, 2 to move east, 3 to move North, 4 to move South"<<
 std::cout<< "5 to check objective"<<std::endl;
 std::cin>>input;
 //determine user input
-if(input == '5')
+if(input == 5)
+{
 std::cout<<quests->checkQuest()<<std::endl;
+std::cout<<"SUP I AM NOT BROKEN"<<std::endl;
+}
+else if (input == 6)
+break;
 else
 map->move(input);
 std::cout<<"======================================================================================" <<std::endl;
