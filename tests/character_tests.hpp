@@ -101,4 +101,66 @@ TEST(Character_Name_Tests, Construct_with_Name){
     EXPECT_EQ(test->getName(),"Steve Rogers");
     delete test;
 }
+
+TEST(Player_Level_Tests, InitialLevel){
+   Player* test = new Player("John Smith", new Bow(), new LightArmor(), 20, 100);
+	EXPECT_EQ(test->getLevel(), 1);
+	delete test;}
+
+TEST(Player_Level_Tests, LevelUp1_CheckLevel){
+   Player* test = new Player("John Smith", new Bow(), new LightArmor(), 20, 100);
+        test->addXP(50);
+	EXPECT_EQ(test->getLevel(), 2);
+        delete test;}
+
+TEST(Player_Level_Tests, LevelUp1_CheckXP){
+   Player* test = new Player("John Smith", new Bow(), new LightArmor(), 20, 100);
+        test->addXP(50);
+        EXPECT_EQ(test->getExperience(), 0);
+        delete test;}
+
+TEST(Player_Level_Tests, LevelUp2_CheckLevel){
+   Player* test = new Player("John Smith", new Bow(), new LightArmor(), 20, 100);
+        test->addXP(200);
+        EXPECT_EQ(test->getLevel(), 3);
+        delete test;}
+
+TEST(Player_Level_Tests, LevelUp2_CheckXP){
+   Player* test = new Player("John Smith", new Bow(), new LightArmor(), 20, 100);
+        test->addXP(200);
+        EXPECT_EQ(test->getExperience(), 50);
+        delete test;}
+
+TEST(Player_Health_Tests, Initial_Health){
+	Player* test= new Player("John Smith", new Axe(), new HeavyArmor(), 20, 100);
+	test->Heal();
+	EXPECT_EQ(test->getCurHP(),100);
+	delete test;}
+
+TEST(Player_Health_Tests, Full_Heal){
+        Player* test= new Player("John Smith", new Axe(), new HeavyArmor(), 20, 100);
+        test->takeDamage(20);
+	test->Heal();
+        EXPECT_EQ(test->getCurHP(),100);
+        delete test;}
+
+TEST(Player_Health_Tests, Partial_Heal){
+        Player* test= new Player("John Smith", new Axe(), new HeavyArmor(), 20, 100);
+        test->takeDamage(50);
+	test->Heal();
+        EXPECT_EQ(test->getCurHP(),85);
+        delete test;}
+
+TEST(Player_Health_Tests, Insufficient_Heal){
+        Player* test= new Player("John Smith", new Axe(), new HeavyArmor(), 20, 200);
+        test->takeDamage(200);
+        test->Heal();
+        test->Heal();
+        test->Heal();
+        test->Heal();
+        test->Heal();
+        test->Heal();
+        EXPECT_EQ(test->getCurHP(),115);
+        delete test;}
+
 #endif

@@ -40,8 +40,9 @@ class Character {
             }
             return cur_HP;
         }
-    
-    protected:
+
+	protected:
+	//Data Members 
 	std::string name;   //Character's Name
         Inventory* pack;    //Character's Inventory
         int damage;         //Base Damage Stat
@@ -59,23 +60,26 @@ class Player : public Character {
 		damage=dmg;
 		cur_HP=max_HP=HP;
 		experience = 0;
-		int level=0;
+		level=1;
 		pack = new Inventory(wpn, arm, 5);
 	}
-	~Player(){delete pack;}
 	int getLevel(){return level;}	//returns level of Player Character
 	void Heal(){	//Used to heal character using healing item from inventory
-		if(pack->getHealing()>=1){
-			cur_HP+=20;
-			if(cur_HP>max_HP){
-				cur_HP=max_HP;
+		if(cur_HP==max_HP){
+			std::cout << "You have no wounds to heal\n\n";
+		}else{
+			if(pack->getHealing()>=1){
+				cur_HP+=20;
+				if(cur_HP>max_HP){
+					cur_HP=max_HP;
+				}
+				pack->changeHealing(-1);
+				std::cout<< "Healed!!!\nCurrent Health is now: " << cur_HP <<"\\" <<max_HP <<std::endl;
+				std::cout<< pack->getHealing()<< " Health Items Remaining\n\n";
 			}
-			pack->changeHealing(-1);
-			std::cout<< "Healed!!!\nCurrent Health is now: " << cur_HP <<"\\" <<max_HP <<std::endl;
-			std::cout<< pack->getHealing()<< " Health Items Remaining\n\n";
-		}
-		else{
-			std::cout<<"No Health Items Available!!!"<<std::endl;
+			else{
+				std::cout<<"No Health Items Available!!!"<<std::endl;
+			}
 		}		
 	}
 	void swapWeapon(Weapon* wpn){ //Replace equipped weapon with new weapoon
@@ -97,12 +101,10 @@ class Player : public Character {
 	}
 	void addXP(int xp){	     //Used to increase amount of experience of player. Handles leveling
 		experience += xp;
-
-		if(experience>=(level*50)){
+		while(experience>=50*level){
 			experience-=(level*50);
-			std::cout << "Congratulations! " << name << "has leveled up and is now level " << ++level;
+			std::cout<<"Congratulations! " << name << " is now level " << ++level << std::endl;
+			}
 		}
-
-	}
 };
 #endif
