@@ -64,16 +64,6 @@ Player and Non-Player Characters will be created using the basics of the Factory
 #### Quest
 This is the Quest class UML digram, the purpose of this is to create a relationship where Questlog contains Quests. We are once again going to gnerate the entire Questlog in the main, and everything will be made in a generate function there. Every Quest will then be generated and inserted into Questlog to allow for easy deletion and interaction. Each Quest will be generated with 2 Tile pointers so that Questlog can communicate with Map and determine when quests are active and when they will start and end. The Questlog will be the main thing to tell the player what to do to win the game. 
 
-
-> ## Phase III
- > You will need to schedule a check-in with the TA (during lab hours or office hours). Your entire team must be present. 
- > * Before the meeting you should perform a sprint plan like you did in Phase II
- > * In the meeting with your TA you will discuss: 
- >   - How effective your last sprint was (each member should talk about what they did)
- >   - Any tasks that did not get completed last sprint, and how you took them into consideration for this sprint
- >   - Any bugs you've identified and created issues for during the sprint. Do you plan on fixing them in the next sprint or are they lower priority?
- >   - What tasks you are planning for this next sprint.
-
  > ## Final deliverable
  > All group members will give a demo to the TA during lab time. The TA will check the demo and the project GitHub repository and ask a few questions to all the team members. 
  > Before the demo, you should do the following:
