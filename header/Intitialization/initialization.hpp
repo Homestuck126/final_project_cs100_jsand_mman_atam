@@ -9,9 +9,50 @@ class initialization
 private: 
 Map* delete_map;
 QuestLog* delete_quest;
+CharacterFactory *delete_charFactory;
+Character *delete_char;
+
+
+
 public:
-initialization(Map* map_in, QuestLog* quests_in)
+initialization(Map* map_in, QuestLog* quests_in, CharacterFactory * makePlayer, Character *player)
 {
+
+
+Player* createPlayer() {
+	int input = 0;	
+	std::cout<<"What is your Name" <<std::endl;
+	std::string name;
+	std::cin>> name;
+	std::cout<<"Enter the class you wish to be\n 1 - Homeless man\n2 - Ranger\n3 - Riot Raider" <<std::endl;
+	std::cin>>input;
+	switch(input)
+  	 {
+       		case 1:
+       		 return player = playermaker->getPlayer(name , 0);
+       		 break;
+        	case 2:
+        	return player = playermaker->getPlayer(name , 1);
+		break;
+        	case 3:
+        	return player = playermaker->getPlayer(name , 2);
+        	break;
+        	default:
+        	std::cout<<"invalid input"<<std::endl;
+  }
+  return nullptr;
+}
+
+
+
+
+
+
+
+
+
+
+
 Tile* beginning = new Tile ("You stand at a bustling space station. The flashing neon signs and the whirr of the air control unit inundates the station. Several teleportation portals lie at the cardinal directions of the room. To the North, lies the way to the blue planet. To the South, the Red. To the West, Rainbow. To the East Green. ", 1);
 Tile* green = new Tile ("Welcome to the Green planet, a verdant planet filled with vegetation. To the West, the portal you just exited from glows with unworldy energies. To the North, a jungle temple towers above the trees. To the South, a massive tree towers over all the rest. To the East, a beam of life shoots up from the planet." ,1);
 Tile* Temple = new Tile("You enter a cobblestone Temple, Moss propogating through out the stone, and Vines growing out of every wall. As you walk in, you see a brazier. Etched in stone above are the words, \"Bring the lifeblood of red\" you wonder what this could mean. You can go South to return to the portal." , 1);
@@ -83,10 +124,14 @@ Volcano=nullptr;
 River=nullptr;
 this->delete_map = map_in;
 this->delete_quest = quests_in;
+this->delete_char = player;
+this->delete_charFactory = makePlayer;
 }
 ~initialization()
 {
     delete delete_map;
     delete delete_quest;
+    delete delete_char;
+    delete delete_charFactory;
 }
 };
