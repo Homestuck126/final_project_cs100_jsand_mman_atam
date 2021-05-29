@@ -8,6 +8,7 @@
 #include "Quest_test.cpp"
 #include "QuestLog_test.hpp"
 
+//#include "MenuTest.hpp"
 
 int main(int argc, char **argv) {
 	::testing::InitGoogleTest(&argc, argv);
