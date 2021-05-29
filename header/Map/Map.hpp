@@ -10,6 +10,7 @@ class Map : public Tile
 	std::vector<Tile*> list;
 	public:
 	Map(Tile*);
+	Map();
 	~Map();
 	bool move(int);
 	Tile* getCurrent();
