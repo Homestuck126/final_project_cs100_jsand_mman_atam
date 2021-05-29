@@ -75,9 +75,9 @@ class CharMenu : public Menu {
 
 				}
 		char getChoice () {return choice;}
-		bool getFlag() { if(quests->compareQuest(map->getCurrent())) {
+		bool getFlag() { //if(quests->compareQuest(map->getCurrent())) {
 						return false;
-					} 
+				//	} 
 				}
 
 

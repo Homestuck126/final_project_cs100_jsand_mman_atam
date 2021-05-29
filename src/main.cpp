@@ -4,6 +4,9 @@
 #include "../header/Quest/Quest.hpp"
 #include "../header/Intitialization/initialization.hpp"
 #include "../header/Intitialization/InitialPlayer.hpp"
+
+#include "../header/Menu.hpp"
+
 #include <iostream>
 
 int main()
@@ -21,8 +24,10 @@ player = play1->createPlayer();
 initialization* generation = new initialization(map,quests);
 
 
+MapMenu *newM;
+//MapMenu *mapM = new MapM(map);
 
-
+newM->print();
 
 
 
