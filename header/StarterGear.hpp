@@ -58,10 +58,10 @@ class StarterA1 : public Armor {
 	public:
 		StarterA1() {
 			this->name = "Raggedy Vest";
-			this->healthInc = 6;
+			this->protection = 6;
 		}
 		std::string getName() const override {return name;}
-		int getHealth() const override {return healthInc;}
+		int getProt() const override {return protection;}
 };
 
 class StarterA2 : public Armor {
@@ -69,10 +69,10 @@ class StarterA2 : public Armor {
         public:
                 StarterA2() {
                         this->name = "Camoflaged Jacket";
-                        this->healthInc = 2;
+                        this->protection = 2;
                 }
                 std::string getName() const override {return name;}
-                int getHealth() const override {return healthInc;}
+                int getProt() const override {return protection;}
 };
 
 class StarterA3 : public Armor {
@@ -80,10 +80,10 @@ class StarterA3 : public Armor {
         public:
                 StarterA3() {
                         this->name = "Repurposed Riot Suit";
-                        this->healthInc = 8;
+                        this->protection = 8;
                 }
                 std::string getName() const override {return name;}
-                int getHealth() const override {return healthInc;}
+                int getProt() const override {return protection;}
 };
 
 #endif

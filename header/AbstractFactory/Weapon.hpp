@@ -13,12 +13,9 @@ class Weapon {
 		virtual int getAttackDmg() const = 0;
 };
 
-class Axe : public Weapon {
-	private:
-		std::string name;
-		int attackDamage;
+class ConcreteW1 : public Weapon {
         public:
-		Axe(){this->name = "Axe";
+		ConcreteW1(){this->name = "Phase Axe";
 		      this->attackDamage = 7; }
                 std::string getName() const override {
 
@@ -29,13 +26,10 @@ class Axe : public Weapon {
 		}
 };
 
-class Bow : public Weapon {
-	private:
-		std::string name;
-		int attackDamage; //needed if its inheriting?
+class ConcreteW2 : public Weapon {
 	public:
-		Bow() {
-		 	this->name = "Bow";
+		ConcreteW2() {
+		 	this->name = "Light Caster";
 			this->attackDamage = 10;
 		}
 
@@ -47,4 +41,33 @@ class Bow : public Weapon {
 			return attackDamage;
 		}
 };
+
+class ConcreteW3 : public Weapon {
+        public:
+                ConcreteW3(){this->name = "Heavy Repeater";
+                      this->attackDamage = 9; }
+                std::string getName() const override {
+
+                        return name;
+                }
+                int getAttackDmg() const override {
+                        return attackDamage;
+                }
+};
+
+class ConcreteW4 : public Weapon {
+        public:
+                ConcreteW4() {
+                        this->name = "Laser Pike";
+                        this->attackDamage = 6;
+                }
+
+                std::string getName() const override {
+                        return name;
+                }
+                int getAttackDmg() const override {
+                        return attackDamage;
+                }
+};
+
 #endif

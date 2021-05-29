@@ -17,21 +17,30 @@ class CharacterFactory {
 		~CharacterFactory(){
 			delete ElfFact;
 			delete OrcFact;}
-		Character* getEnemy(int x){
+		Character* getEnemy(int x,int y, int scale){
 			Character* enemy;
-			Weapon* wpn;
-			Armor* arm;
 			switch(x){
 				case 0:
-					wpn = ElfFact->createWeapon();
-					arm = ElfFact->createArmor();
-					enemy = new Character("Default Elf",wpn, arm, 10, 100, 30);
+					switch(y){
+						case 0:
+							enemy= new Character("Elf Scout", ElfFact->createWeapon(y), ElfFact->createArmor(y),(10+(2*scale)),(50+(10*scale)),(20+(20*scale)));
+							break;
+						case 1:
+							enemy= new Character("Elf Warrior", ElfFact->createWeapon(y), ElfFact->createArmor(y),(7+(2*scale)),(80+(10*scale)),(25+(25*scale)));
+                                                        break;
+						};
 					break;	
 				case 1:
-                                        wpn = OrcFact->createWeapon();
-                                        arm = OrcFact->createArmor();
-                                        enemy = new Character("Default Orc",wpn, arm, 15, 80, 30);
+                                        switch(y){
+                                                case 0:
+                                                        enemy= new Character("Orc Scourge", OrcFact->createWeapon(y), OrcFact->createArmor(y),(8+(3*scale)),(40+(15*scale)),(15+(30*scale)));
+                                                        break;
+                                                case 1:
+                                                        enemy= new Character("Orc Destroyer", OrcFact->createWeapon(y), OrcFact->createArmor(y),(11+(3*scale)),(75+(15*scale)),(20+(35*scale)));
+                                                        break;
+                                        };
                                         break;
+
 				}
 			return enemy;
 			}
@@ -42,7 +51,7 @@ class CharacterFactory {
 					break;
 				case 1: player=new Player(n, new StarterW2(), new StarterA2(), 30, 80);
 					break;
-				case 2: player=new Player(n, new StarterW3(), new StarterA3(), 5, 160);
+				case 2: player=new Player(n, new StarterW3(), new StarterA3(), 8, 160);
 					break;
 				}		
 			return player;

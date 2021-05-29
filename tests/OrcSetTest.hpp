@@ -10,8 +10,8 @@ TEST(OrcSet, CheckWeaponName) {
 	GearFactory * gearByClass;
 	gearByClass = new OrcFactory();
 	
-	Weapon *orcWeapon = gearByClass->createWeapon();
-	EXPECT_EQ(orcWeapon->getName(), "Axe");
+	Weapon *orcWeapon = gearByClass->createWeapon(1);
+	EXPECT_EQ(orcWeapon->getName(), "Heavy Repeater");
 
 
 
@@ -21,8 +21,8 @@ TEST(OrcSet, CheckArmorName) {
 	GearFactory *gearByClass;
 	gearByClass = new OrcFactory();
 	
-	Armor* orcArmor = gearByClass->createArmor();
-	EXPECT_EQ(orcArmor->getName(), "HeavyArmor");
+	Armor* orcArmor = gearByClass->createArmor(1);
+	EXPECT_EQ(orcArmor->getName(), "Berserker Vest");
 
 
 }
@@ -32,8 +32,8 @@ TEST(OrcSet, CheckWeaponStat) {
 	GearFactory *gearByClass;
 	gearByClass = new OrcFactory();
 
-	Weapon *orcWeapon = gearByClass->createWeapon();
-	EXPECT_EQ(orcWeapon->getAttackDmg(), 7);
+	Weapon *orcWeapon = gearByClass->createWeapon(1);
+	EXPECT_EQ(orcWeapon->getAttackDmg(), 9);
 }
 
 TEST(OrcSet, CheckArmorStat) {
@@ -41,8 +41,8 @@ TEST(OrcSet, CheckArmorStat) {
         GearFactory *gearByClass;
         gearByClass = new OrcFactory();
 
-        Armor * newArmor  = gearByClass->createArmor();
-        EXPECT_EQ(newArmor->getHealth(), 15);
+        Armor * newArmor  = gearByClass->createArmor(1);
+        EXPECT_EQ(newArmor->getProt(), 5);
 
 
 }

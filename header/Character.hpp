@@ -34,7 +34,7 @@ class Character {
         int getCurHP(){return cur_HP;}                          //Getter funtion for Current Health
         int getExperience(){return experience;}                 //Getter funtion for Experience
         int takeDamage(int incoming){
-            cur_HP-=(incoming-pack->getArmorVal());
+            cur_HP-=(incoming-(this->getProtection()));
             if(cur_HP<=0){
                 cur_HP=0;
             }
@@ -78,10 +78,10 @@ class Player : public Character {
 				}
 				pack->changeHealing(-1);
 				std::cout<< "Healed!!!\nCurrent Health is now: " << cur_HP <<"\\" <<max_HP <<std::endl;
-				std::cout<< pack->getHealing()<< " Health Items Remaining\n\n";
+				std::cout<< pack->getHealing()<< " Health Kits Remaining\n\n";
 			}
 			else{
-				std::cout<<"No Health Items Available!!!"<<std::endl;
+				std::cout<<"No Health Kits Available!!!"<<std::endl;
 			}
 		}		
 	}
