@@ -26,8 +26,8 @@ initialization* generation = new initialization(map,quests);
 
 
 Combat *newCom = new Combat(makePlayer);
-newCom->startCombat();	
-/*
+//newCom->startCombat();	
+
 CharMenu * charM = new CharMenu(map, quests);
 bool check = true;
 
@@ -39,12 +39,20 @@ while(check) {
 		std::cout << "-----------" << std::endl;
 
 		check = charM->getFlag();
+
+		newCom->startCombat();
+
+
+		
+		
+		
 	}
 
 
-*/
+
 //deletion
-//delete charM;
+delete newCom;
+delete charM;
 delete generation;
 delete play1;
 }

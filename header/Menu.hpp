@@ -1,11 +1,11 @@
 #ifndef __MENU_HPP__
 #define __MENU_HPP__
 
-//#include "../Map.hpp"
-//#include "../QuestLog.hpp"
+#include "Quest/Questlog.hpp"
 
 #include <string>
-#include "../header/Map/Map.hpp"
+#include "Character.hpp"
+#include "Map/Map.hpp"
 #include <iostream>
 class Menu {
 
@@ -102,11 +102,37 @@ class CharMenu : public Menu {
 
 
 class CombatMenu : public Menu {
-//		 void setChoice(char c) {choice = c;}
+	
+		private:
+		Player *myChar;
+		Character *enemy;
+	
+		public:
+		CombatMenu (Character* e, Player *p) {this->myChar = p;
+							this->enemy = e;
+							}
+		void print () {std::cout << "\n1- Attack \n2- Heal \n3-Flee" << std::endl;}
+		void setChoice () {
+			
+		 std::cin >> choice;
+		 switch(choice){
 
-		void print () {std::cout << "" << std::endl;}
-//		char getChoice () {return  choice;}
-//		bool getFlag() {return false;}
+			case '1':
+				std::cout << "Hitting Enemy!" << std::endl;
+				enemy->takeDamage(myChar->getDamage());
+				break;
+			case '2':
+				std::cout << "Healing.." << std::endl;
+				myChar->Heal();
+				break;
+			case '3':
+				break;
+
+
+		}
+}
+		bool getFlag() {return false;}
+		
 
 };
 
