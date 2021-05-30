@@ -24,7 +24,7 @@ class StarterW1: public Weapon {
 };
 class StarterW2: public Weapon {
         public:
-                StarterW2(){this->name = "Worn Rifle";
+                StarterW2(){this->name = "Worn Las Rifle";
                       this->attackDamage = 12; }
                 std::string getName() const override {
                         return name;
@@ -68,7 +68,7 @@ class StarterA2 : public Armor {
 
         public:
                 StarterA2() {
-                        this->name = "Camoflaged Jacket";
+                        this->name = "Reflective Jacket";
                         this->protection = 2;
                 }
                 std::string getName() const override {return name;}
