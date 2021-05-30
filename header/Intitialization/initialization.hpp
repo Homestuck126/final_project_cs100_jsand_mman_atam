@@ -30,7 +30,7 @@ Tile* red = new Tile ("Welcome to the Red planet, a planet with heavy volcanic a
 Tile* Man = new Tile ("A man in a glowy blue suit stands here, he has a big hover clipboard and appears to be just standing there. You can go East to return to the portal.", 1);
 Tile* River = new Tile ( "A winding river of lava flows through here, blocking your way across. Not that you particularly want to go across You can go West to return to the Portal" , 1);
 Tile* Volcano = new Tile ("You enter a small hole in the wall of the volcano, like one of those old terran films, there is a pathway leading to a massive lava pool. A pile of rocks lay at the end of the walk way. You can go North to return to the portal",1);
-Tile* rainbow = new Tile ("RAINBOW WORLDDDDDDDDDDDDDDDDDDDDDDDDDDD" ,1);
+Tile* rainbow = new Tile ("RAINBOW WORLDDDDDDDDDDDDDDDDDDDDDDDDDDD. You can go East to leave." ,1);
 map_in->insertTile(beginning);
 map_in->insertTile(green);
 map_in->insertTile(Temple);
