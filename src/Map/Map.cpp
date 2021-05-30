@@ -28,7 +28,6 @@ char c = input;
 //movement
 	if(c=='1' && current->getNext('1') !=nullptr)
 	{
-		std::cout<<"I am not the problem map"<<std::endl;
 	move = true;
 	current= current->getNext('1');
 	}
