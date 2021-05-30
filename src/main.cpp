@@ -28,17 +28,73 @@ initialization* generation = new initialization(map,quests);
 //MapMenu *mapM = new MapM(map);
 
 //newM->print();
+/*
+int validation = 0;
+CharMenu * charM = new CharMenu(map, quests);
+while(charM->getFlag()) {
+	charM->print();
+	charM->setChoice();
+	charM->getFlag();
+	
+		while(validation != 1) {
+			std::cout << "enter 1" << std::endl;
+			std::cin >> validation;
+			
+		
+		}
+
+		system("clear");
 
 
-CharMenu * charM = new CharMenu();
+	
+	//if(!charM->getFlag() ) {
 
-charM->print();
-charM->setChoice();
+	//	break;
+}
+
+//	system("clear");
+	
+//}
+
+//charM->print();
+//charM->setChoice();
+
+*/
+
+CharMenu * charM = new CharMenu(map, quests);
+bool check = true;
+
+while(check) {
+	
+		charM->print();
+		charM->setChoice();
+		//charM->getFlag();
+
+		std::cout << "-----------" << std::endl;
+
+		check = charM->getFlag();
+	}
+	/*
+        charM->print();
+        charM->setChoice();
+        charM->getFlag();
+	
+	std::cout << "Press1" << std::endl;
+
+        charM->print();
+        charM->setChoice();
+        charM->getFlag();
+
+	std::cout << "Press 2" << std::endl;
 
 
 
-
-
+       charM->print();
+        charM->setChoice();
+        charM->getFlag();
+	
+	std::cout << "Press3 " << std::endl;
+*/
 //deletion
 delete generation;
 delete play1;

@@ -22,15 +22,15 @@ right = right_input;
 top = top_input;
 bottom = bottom_input;
 }
-Tile* Tile::getNext(int input)
+Tile* Tile::getNext(char input)
 {
-if(input == 1)
+if(input == '1')
 return left;
-if(input == 2)
+if(input == '2')
 return right;
-if(input == 3)
+if(input == '3')
 return top;
-if(input == 4)
+if(input == '4')
 return bottom;
 
 }

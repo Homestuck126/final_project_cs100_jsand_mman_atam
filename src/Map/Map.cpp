@@ -18,34 +18,34 @@ for(unsigned i=0; i< size; i++)
 	delete list.at(i);
 }
 }
-bool Map::move(int input)
+bool Map::move(char input)
 {
 bool move = false;
 //bool flag to check if moved
 
 //input validation
-int in = input;
+char c = input;
 //movement
-	if(in==1 && current->getNext(1) !=nullptr)
+	if(c=='1' && current->getNext(1) !=nullptr)
 	{
 	move = true;
-	current= current->getNext(1);
+	current= current->getNext('1');
 	}
-        if(in==2 && current->getNext(2) !=nullptr)
+        if(c=='2' && current->getNext(2) !=nullptr)
         {
         move = true;
-        current= current->getNext(2);
+        current= current->getNext('2');
         }
-        if(in==3 && current->getNext(3) !=nullptr)
+        if(c=='3' && current->getNext('3') !=nullptr)
         {
         move = true;
-        current= current->getNext(3);
+        current= current->getNext('3');
         }
 
-        if(in==4 && current->getNext(4) !=nullptr)
+        if(c=='4' && current->getNext('4') !=nullptr)
 	{
         move = true;
-        current= current->getNext(4);
+        current= current->getNext('4');
         }
 	//if didn't move 
 	if (move == false)
