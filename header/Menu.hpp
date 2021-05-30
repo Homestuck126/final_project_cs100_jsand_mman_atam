@@ -15,8 +15,8 @@ class Menu {
 //		virtual bool getFlag() = 0;
 //		virtual void setChoice(char) = 0;
 	protected:
-//		char choice;
-//		bool flag;
+		char choice;
+		bool flag;
 		
 };
 
@@ -25,8 +25,7 @@ class Menu {
 class MapMenu : public Menu {
 
         private:
-     //   Map * newMap;
-
+        //Map * newMap;
         public:
        //         MapMenu(Map* map) {this->newMap= map;}
        
@@ -40,9 +39,9 @@ class MapMenu : public Menu {
                         return choice;
                 }
                 bool getFlag() {return false; }//return newMap->move(choice);} //have to implement?
-
-                void setChoice() {choice = 'a';}
 */
+                void setChoice() {choice = '1';}
+
 };
 
 
@@ -53,20 +52,20 @@ class MapMenu : public Menu {
 class CharMenu : public Menu {
 	
 	private:
-//	MapMenu *mapM;
-//	Map *newMap;
+	
+	MapMenu *compass;
 
 	public:
-	
+		CharMenu () {compass = new MapMenu();}
 		void print() {std::cout << "1 - Move \n2 - Check Objective\n3 - Check Inventory\n4 - Quit Game" << std::endl;}
-	/*	
+		
 		void setChoice() {
 				  std::cin >> choice;
 				  switch(choice) {
 					case '1':
-						mapM->print();
-						mapM->setChoice();
-						mapM->getFlag();				
+						compass->print();
+						compass->setChoice();
+						//->getFlag();				
 						break;
 					case '2':
 						break;
@@ -78,6 +77,7 @@ class CharMenu : public Menu {
 					}
 
 				}
+/*
 		char getChoice () {return choice;}
 		bool getFlag() { //if(quests->compareQuest(map->getCurrent())) {
 						return false;

@@ -24,15 +24,16 @@ player = play1->createPlayer();
 initialization* generation = new initialization(map,quests);
 
 
-MapMenu *newM = new MapMenu();
+//MapMenu *newM = new MapMenu();
 //MapMenu *mapM = new MapM(map);
 
-newM->print();
+//newM->print();
 
 
+CharMenu * charM = new CharMenu();
 
-
-
+charM->print();
+charM->setChoice();
 
 
 
