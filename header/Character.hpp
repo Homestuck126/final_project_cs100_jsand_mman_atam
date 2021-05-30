@@ -110,5 +110,9 @@ class Player : public Character {
 					<<"Health is fully restored\n";
 			}
 		}
+	void checkInventory(){
+		pack->printInventory();
+	}
+	
 };
 #endif
