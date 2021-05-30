@@ -34,6 +34,8 @@ class Combat {
 			this->cF = c;
 			this->enemy = cF->getEnemy(0,0,1);
 			this->player = cF->getPlayer("mel",0);
+			
+			//this->player = p;
 
 			isDone = false;
 			missed = false;
@@ -44,9 +46,9 @@ class Combat {
 		
 			setMissed();
 			introLines();
-			playerLines();
 		
 			enemy->takeDamage(player->getDamage());
+			playerLines();
 			if(enemy->getCurHP() == 0) {
 				playerWon = true;
 				isDone = true;
@@ -55,11 +57,10 @@ class Combat {
 				playerWon = false;
 				isDone = true;
 			}
-		
-			if(!missed) {
-				attackLines();
-				player->takeDamage(enemy->getDamage());
-			}
+			
+			//enemies turn
+			player->takeDamage(enemy->getDamage());
+			attackLines();
 		}
 		
 		

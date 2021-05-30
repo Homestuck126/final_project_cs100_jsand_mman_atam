@@ -8,6 +8,7 @@ class Weapon {
                std::string name;
 	       int attackDamage;
         public:
+		Weapon () {}
                 virtual ~Weapon(){};
                 virtual std::string getName() const = 0;
 		virtual int getAttackDmg() const = 0;

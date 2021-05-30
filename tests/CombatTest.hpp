@@ -8,13 +8,11 @@
 TEST(CombatTest, CheckEnemy) {
 
 CharacterFactory *cf;
-
+Player * mel = cf->getPlayer("mel",0);
 //Player *player = cf->getPlayer("mel",0);
 //Character  *enemy = cf->getEnemy(0,0,1);
 
-Combat * newCombat = new Combat(cf);
-
-newCombat->startCombat();
+//Combat * newCombat = new Combat(cf);
 
 }
 
