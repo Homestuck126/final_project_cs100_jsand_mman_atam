@@ -24,7 +24,7 @@ player = play1->createPlayer();
 initialization* generation = new initialization(map,quests);
 
 
-
+/*
 Combat *newCom = new Combat(makePlayer);
 //newCom->startCombat();	
 
@@ -49,10 +49,10 @@ while(check) {
 	}
 
 
-
+*/
 //deletion
-delete newCom;
-delete charM;
+//delete newCom;
+//delete charM;
 delete generation;
 delete play1;
 }

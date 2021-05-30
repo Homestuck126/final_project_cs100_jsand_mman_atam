@@ -30,14 +30,12 @@ class Combat {
 		bool isDone;
 		bool missed;
 	public:
-		Combat(CharacterFactory *c) {
+		Combat(CharacterFactory *c, Player *p) {
 			this->cF = c;
 			this->enemy = cF->getEnemy(0,0,1);
-			this->player = cF->getPlayer("mel",0);
+			this->player = p;
 			
 			combatMenu = new CombatMenu(enemy, player);
-			//this->player = p;
-			//combatMenu = new combatMenu();
 			isDone = false;
 			missed = false;
 			playerWon = false;
@@ -51,11 +49,8 @@ class Combat {
 			introLines();
 			
 			do {
-			combatMenu->print();
-			combatMenu->setChoice();
+			combatMenu->menu();
 
-			//enemy->takeDamage(player->getDamage());
-			//playerLines();
 
 			if(enemy->getCurHP() == 0) {
 
