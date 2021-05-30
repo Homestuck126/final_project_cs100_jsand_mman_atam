@@ -24,12 +24,14 @@ class ElfFactory: public GearFactory {
 			 switch(x){
                                 case 0:
 					newWpn = new ConcreteW2();
+					return newWpn;
                                         break;
                                 case 1:
 					newWpn = new ConcreteW4();
+					return newWpn;
                                         break;
                         }
-			return newWpn;
+			return nullptr;
 		}
 
 		Armor * createArmor(int x) const override{
@@ -37,12 +39,14 @@ class ElfFactory: public GearFactory {
 			 switch(x){
                                 case 0: 
 					newArm = new ConcreteA4();
+					return newArm;
                                         break;
                                 case 1:
 					newArm = new ConcreteA1();
+					return newArm;
                                         break;
                         }
-			return newArm;
+			return nullptr;
 		}
 };
 
@@ -54,12 +58,14 @@ class OrcFactory: public GearFactory {
 			switch(x){
 				case 0:
 					newWpn = new ConcreteW1();
+					return newWpn;
 					break;
 				case 1: 
 					newWpn = new ConcreteW3();
+					return newWpn;
 					break;			
 			}
-                        return newWpn;
+                        return nullptr;
                 }
 
                 Armor * createArmor(int x) const override{
@@ -67,12 +73,14 @@ class OrcFactory: public GearFactory {
 			 switch(x){
                                 case 0:
 					newArm = new ConcreteA3();
+					return newArm;
                                         break;
                                 case 1:
 					newArm = new ConcreteA2();
+					return newArm;
                                         break;
                         }
-                        return newArm;
+                        return nullptr;
                 }
 };
 #endif

@@ -18,7 +18,7 @@ class CharacterFactory {
 			delete ElfFact;
 			delete OrcFact;}
 		Character* getEnemy(int x,int y, int scale){
-			Character* enemy;
+			Character* enemy = new Character();
 			switch(x){
 				case 0:
 					switch(y){
@@ -48,13 +48,17 @@ class CharacterFactory {
 			Player* player;
 			switch(x){
 				case 0:	player=new Player(n, new StarterW1(), new StarterA1(), 15, 120);
+					return player;
 					break;
 				case 1: player=new Player(n, new StarterW2(), new StarterA2(), 30, 80);
+					return player;
 					break;
 				case 2: player=new Player(n, new StarterW3(), new StarterA3(), 8, 160);
+					return player;
 					break;
+				default:
+					return nullptr;
 				}		
-			return player;
 		}	
 };
 

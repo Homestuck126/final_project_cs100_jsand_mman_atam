@@ -6,7 +6,7 @@
 #include "../header/Intitialization/InitialPlayer.hpp"
 
 #include "../header/Menu.hpp"
-
+#include "../header/Combat.hpp"
 #include <iostream>
 
 int main()
@@ -24,7 +24,9 @@ player = play1->createPlayer();
 initialization* generation = new initialization(map,quests);
 
 
-	
+
+Combat *newCom = new Combat(makePlayer);
+//newCom->startCombat();	
 
 CharMenu * charM = new CharMenu(map, quests);
 bool check = true;
@@ -37,8 +39,19 @@ while(check) {
 		std::cout << "-----------" << std::endl;
 
 		check = charM->getFlag();
+
+		newCom->startCombat();
+
+
+		
+		
+		
 	}
+
+
+
 //deletion
+delete newCom;
 delete charM;
 delete generation;
 delete play1;

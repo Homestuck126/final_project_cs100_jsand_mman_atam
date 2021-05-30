@@ -10,6 +10,7 @@ class Armor {
                 std::string name;
 		int protection;
         public:
+		Armor() {}
                 virtual ~Armor() {};
                 virtual std::string getName () const = 0;
 		virtual int getProt () const = 0;
