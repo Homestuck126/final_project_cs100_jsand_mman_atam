@@ -26,12 +26,12 @@ bool move = false;
 //input validation
 char c = input;
 //movement
-	if(c=='1' && current->getNext(1) !=nullptr)
+	if(c=='1' && current->getNext('1') !=nullptr)
 	{
 	move = true;
 	current= current->getNext('1');
 	}
-        if(c=='2' && current->getNext(2) !=nullptr)
+        if(c=='2' && current->getNext('2') !=nullptr)
         {
         move = true;
         current= current->getNext('2');
