@@ -24,14 +24,10 @@ player = play1->createPlayer();
 initialization* generation = new initialization(map,quests);
 
 
-MapMenu *newM;
+MapMenu *newM = new MapMenu();
 //MapMenu *mapM = new MapM(map);
 
 newM->print();
-
-
-
-
 
 
 

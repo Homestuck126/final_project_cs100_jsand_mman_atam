@@ -6,17 +6,17 @@
 
 #include <string>
 #include "../header/Map/Map.hpp"
-
+#include <iostream>
 class Menu {
 
 	public:
 		virtual void print() = 0;
-		virtual char getChoice() = 0;
-		virtual bool getFlag() = 0;
-		virtual void setChoice(char) = 0;
+//		virtual char getChoice() = 0;
+//		virtual bool getFlag() = 0;
+//		virtual void setChoice(char) = 0;
 	protected:
-		char choice;
-		bool flag;
+//		char choice;
+//		bool flag;
 		
 };
 
@@ -25,20 +25,24 @@ class Menu {
 class MapMenu : public Menu {
 
         private:
-        Map * newMap;
+     //   Map * newMap;
 
         public:
-                MapMenu(Map* map) {this->newMap= map;}
-                void print() {
+       //         MapMenu(Map* map) {this->newMap= map;}
+       
+		MapMenu() {}
+                void print() override {
                                 std::cout << "1 - Move West\n2 - Move East\n3 - Move North\n4 - Move South" << std::endl;
                                 }
+
+/*
                 char getChoice() {
                         return choice;
                 }
-                bool getFlag() {return newMap->move(choice);} //have to implement?
+                bool getFlag() {return false; }//return newMap->move(choice);} //have to implement?
 
-                void setChoice() {std::cin >> choice;}
-
+                void setChoice() {choice = 'a';}
+*/
 };
 
 
@@ -49,13 +53,13 @@ class MapMenu : public Menu {
 class CharMenu : public Menu {
 	
 	private:
-	MapMenu *mapM;
+//	MapMenu *mapM;
 //	Map *newMap;
 
 	public:
-		
+	
 		void print() {std::cout << "1 - Move \n2 - Check Objective\n3 - Check Inventory\n4 - Quit Game" << std::endl;}
-		
+	/*	
 		void setChoice() {
 				  std::cin >> choice;
 				  switch(choice) {
@@ -79,17 +83,17 @@ class CharMenu : public Menu {
 						return false;
 				//	} 
 				}
-
+*/
 
 };
 
 
 class CombatMenu : public Menu {
-		 void setChoice(char c) {choice = c;}
+//		 void setChoice(char c) {choice = c;}
 
 		void print () {std::cout << "" << std::endl;}
-		char getChoice () {return  choice;}
-		bool getFlag() {return false;}
+//		char getChoice () {return  choice;}
+//		bool getFlag() {return false;}
 
 };
 
