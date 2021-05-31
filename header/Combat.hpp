@@ -32,6 +32,7 @@ class Combat {
 			delete cMenu;
 		}
 		void startCombat() {
+			std::cout << player->getName() << " is ambushed by an " << enemy->getName() << std::endl;
 			do{
 			this->displayStatus();
 			cMenu->menu();
