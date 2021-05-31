@@ -98,7 +98,7 @@ class Player : public Character {
 
                 pack->setArmor(arm);
 		
-		std::cout<<pack->getArmor->getName() << " is now equipped!" <<std::endl;
+		std::cout<<pack->getArmor()->getName() << " is now equipped!" <<std::endl;
 	}
 	void addHeal(int amt){	      //Used to increase the number of healing items in player inventory
 		pack->changeHealing(amt);
