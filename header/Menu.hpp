@@ -102,11 +102,13 @@ class CombatMenu : public Menu {
 };
 class CoreMenu : public Menu {
         private:
+		bool moved;
 		MoveMenu *compass;	
 		Map* newMap;
 		Player* player;
 		QuestLog* newQuests;
 	public:
+		bool playerMoved () {return compass->getFlag();}
 
 		CoreMenu (Map* map, QuestLog * quests, Player *p) {
 				compass = new MoveMenu(map);
