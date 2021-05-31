@@ -98,13 +98,13 @@ The Menu UML is defined as a parent class with CombatMenu, MoveMenu, and CombatM
   * Clone repository into your target directory
    * Git clone --recursive <URL> 
   * Run "cmake ." and "make"
-  * Run the game with "./Phantomheart.exe"
+  * Run the game with "./Phantomheart"
  
  Visual Studio:
  * Open Visual Studio
  * Clone github repository
  * Cmake will run automatically if installed
- * From the Dropdown menu by the Green triangle and select "Phantomheart.exe"
+ * From the Dropdown menu by the Green triangle and select "Phantomheart"
  * Hit the green triangle once executable is selected
   
  
