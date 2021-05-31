@@ -23,7 +23,7 @@ class MoveMenu : public Menu {
 	public:
 		MoveMenu(Map* m){
 			this->map=m;
-			choice= ' ';
+			choice= 0;
 			flag=false;
 			}
 						
@@ -41,15 +41,20 @@ class MoveMenu : public Menu {
 					<<"4 - South\n"
 					<<"5 - Cancel Movement\n";
 				std::cin >> choice;
-				
-				while(choice < '1' || choice > '5') {
-					std::cout << "Wrong input, try again" << std::endl;
-					std::cin >> choice;
+				switch(choice){
+					case '1':
+					case '2':
+					case '3':
+					case '4':
+						map->move(choice);
+						flag = true; 	//just trying to move sets flag
+						break;
+					case '5':		//A quit choice to leave this menu
+						break;
+					default:		//invalid choice 
+						std::cout<<"Invalid Choice\n";
+						break;					
 				}
-				
-				if(choice != '5') {
-				map->move(choice);
-				flag = true;}
 			}
 					
 		
@@ -102,6 +107,7 @@ class CombatMenu : public Menu {
 };
 class CoreMenu : public Menu {
         private:
+		bool moved;
 		MoveMenu *move;	
 		Map* map;
 		Player* player;
@@ -113,9 +119,11 @@ class CoreMenu : public Menu {
 				this->quests = q;
 				this->player = p;
 				flag = true;
+				moved = false;
 				}
+		~CoreMenu(){delete move;}
+
                 void menu(){
-			flag = true;
 			std::cout << map->getCurrent()->getdescription() +
 						"\n1 - Move \n2 - Check Objective\n3 - Check Inventory\n4 - Quit Game" << std::endl;
 			  std::cin >> choice;
@@ -123,7 +131,7 @@ class CoreMenu : public Menu {
 					case '1':
 						move->menu();
 						if(move->getFlag()){
-							flag = false;
+							moved = true;
 						}									
 						break;
 					case '2':
@@ -139,17 +147,26 @@ class CoreMenu : public Menu {
 
 				}
 		
-
 		
                 bool getFlag(){
-			if(quests->compareQuest(map->getCurrent())) {
-					flag = false;
-				}
 			if(player->getCurHP()<=0){
-					flag = false;
-				}
-			return flag; 		
-
+				return false;	
+			}else if(quests->compareQuest(map->getCurrent())) {
+				return false;
+			}else if(moved){
+				return false;
+			}else if(!flag){
+				flag = true;
+				return false;
+			}else return true;
+		}
+		
+		bool getMoveFlag(){
+			if(moved){
+				moved=false;
+				return true;}
+			else{
+				return false;}	
 		}
 };
 

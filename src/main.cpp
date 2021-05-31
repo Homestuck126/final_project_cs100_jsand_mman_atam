@@ -26,7 +26,7 @@ int main(){
 	Player* player = nullptr;
 
 //Interface Object Pointers
-	Menu* worldMenu = nullptr;
+	CoreMenu* menu = nullptr;
 
 //Control Variables
 	char choice = '0'; //controls main menu
@@ -49,7 +49,7 @@ int main(){
 					delete quests; 
 					delete map; 
 					delete worldGen;
-					delete worldMenu;
+					delete menu;
 					map = new Map(); 
 					quests = new QuestLog();}
 				//Create new Player
@@ -57,20 +57,29 @@ int main(){
 				player = pGen->createPlayer(CharCreator);
 				//Create Map and Populate Quests
 				worldGen = new Initialization(map, quests);
-				worldMenu = new CoreMenu(map, quests, player);
+				menu = new CoreMenu(map, quests, player);
 				while(!game_done){
-					if(quests->compareQuest(map->getCurrent())){
-						std::cout << player->getName() << " managed to follow orders and have a wonderful time. Good job!\n";
-						game_done = 1;
+					while(menu->getFlag()){
+						menu->menu();
 					}
 					if(player->getCurHP()<=0){
-						std::cout << player->getName() << " has been beaten. Their adventure is over. What a shame...\n" ;
+                                                std::cout << player->getName() << " has been beaten. Their adventure is over. What a shame...\n" ;
+                                                game_done = 1;
+					}else if(quests->compareQuest(map->getCurrent())){
+						std::cout << player->getName() << " managed to follow orders and have a wonderful time. Good job!\n";
+						game_done = 1;
+					}else if(menu->getMoveFlag()){
+						std::cout << "COMBAT IMPLEMENTED HERE\n";
+					}else{
+						std::cout << "Progress was not saved\n";
 						game_done = 1;
 					}
+						
 				}
 				break;
 			case '2':
-				std::cout <<"\n\n\n\nTHANK YOU FOR PLAYING!!!\n";
+				std::cout <<"\n\nTHANK YOU FOR PLAYING!!!\n\n\n";
+				std::cout << "=========================================\n";
 				break; 
 			default: 
 				std::cout << "Invalid Selection\n\n\n";
@@ -79,8 +88,7 @@ int main(){
 
 	}
 	std::cin.clear();
-	std::cout << "Press [ENTER] to Exit\n\n";
-	std::cin.ignore(100,'\n');	
+	std::cin.ignore();	
 
 
 	//Delete any objects created during runtime
