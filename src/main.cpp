@@ -9,71 +9,53 @@
 #include "../header/Combat.hpp"
 #include <iostream>
 
-int main()
-{
-Map* map = new Map();
-QuestLog* quests = new QuestLog();
+int main(){
+//Global Generation Interfaces
+	CharacterFactory *CharCreator = new CharacterFactory();
+	InitialPlayer* pGen = new InitialPlayer();
 
+//World Initialization Interface
+	Initialization* worldGen = nullptr;
 
-CharacterFactory *makePlayer = new CharacterFactory();
-Player* player;
+//Key Object Pointers
+	Map* map = nullptr;
+	QuestLog* quests = nullptr;
+	Player* player = nullptr;
 
-InitialPlayer* play1 = new InitialPlayer(makePlayer, player);
-player = play1->createPlayer();
+//Control Variables
+	char choice = '0';
 
-initialization* generation = new initialization(map,quests);
+//Welcome Message
 
+        std::cout << "=========================================\n";
+	std::cout << "Welcome to Phantomheart!\n\n";
+//Start Menu Loop
+	while(choice != '2'){
+		std::cout << "***MAIN MENU***\n\nPlease make a selection:\n1 - Start New Game\n2 - Quit\n";
+		std::cin >> choice;
+		switch(choice){
+			case '1':
+				std::cout<<"\n\n***NEW GAME***\n\n";
+				//Clear Previous Game Objects
+				if(player){
+				delete player; delete quests; delete map; delete worldGen;
+				}
+				std::cout<<"**CHARACTER CREATION**\n\n";
+				pGen->
+				break;
+			case '2':
+				std::cout <<"\n\n\n\nTHANK YOU FOR PLAYING!!!\n";
+				break; 
+			default: 
+				std::cout << "Invalid Selection\n\n\n";
+				break;
+		}
 
-CoreMenu *newCore = new CoreMenu(map, quests, player);
-bool check = true;
-bool moved = false;
-Combat * newC = new Combat(makePlayer, player);
-
-while(check) {
-
-	newCore->menu();
-	std::cout << "----" << std::endl;
-	check = newCore->getFlag();		
-	moved = newCore->playerMoved();
-
-
-	if(moved) {
-		newC->startCombat();
 	}
-	
-	
-}
-
-
-/*
-Combat *newCom = new Combat(makePlayer);
-//newCom->startCombat();	
-
-CharMenu * charM = new CharMenu(map, quests);
-bool check = true;
-
-while(check) {
-	
-		charM->print();
-		charM->setChoice();
-
-		std::cout << "-----------" << std::endl;
-
-		check = charM->getFlag();
-
-		newCom->startCombat();
-
-
-		
-		
-		
-	}
-
-
-*/
-//deletion
-//delete newCom;
-//delete charM;
-delete generation;
-delete play1;
+	std::cin.clear();
+	std::cout << "Press [ENTER] to Exit\n\n";
+	std::cin.ignore(100,'\n');	
+	delete pGen; 		//delete Player Initializer
+	delete CharCreator; 	//delete CharacterFactory
+	return 0;
 }
