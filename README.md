@@ -29,8 +29,7 @@
 ## Class Diagram
  
 ### Composite Pattern:
-![Composite](https://user-images.githubusercontent.com/60371257/120246826-40677580-c226-11eb-8ce6-99cf9abe93d5.png)
-
+![Composite](https://user-images.githubusercontent.com/81594784/120246433-1497c000-c225-11eb-847d-c915a21b437c.jpg)
 
 
 
@@ -62,16 +61,10 @@ Player and Non-Player Characters will be created using the basics of the Factory
 
 ### No pattern
 
-![Quest](https://user-images.githubusercontent.com/60371257/120246797-2ded3c00-c226-11eb-8179-cbbf964c78cb.png)
+![Untitled Diagram](https://user-images.githubusercontent.com/60371257/119062742-5bb3c480-b98c-11eb-8e15-206452975ee9.png)
 
 #### Quest
 This is the Quest class UML digram, the purpose of this is to create a relationship where Questlog contains Quests. We are once again going to gnerate the entire Questlog in the main, and everything will be made in a generate function there. Every Quest will then be generated and inserted into Questlog to allow for easy deletion and interaction. Each Quest will be generated with 2 Tile pointers so that Questlog can communicate with Map and determine when quests are active and when they will start and end. The Questlog will be the main thing to tell the player what to do to win the game. 
-
- > ## Final deliverable
- > All group members will give a demo to the TA during lab time. The TA will check the demo and the project GitHub repository and ask a few questions to all the team members. 
- > Before the demo, you should do the following:
- > * Complete the sections below (i.e. Screenshots, Installation/Usage, Testing)
- > * Plan one more sprint (that you will not necessarily complete before the end of the quarter). Your In-progress and In-testing columns should be empty (you are not doing more work currently) but your TODO column should have a full sprint plan in it as you have done before. This should include any known bugs (there should be some) or new features you would like to add. These should appear as issues/cards on your Kanban board. 
  
  ## Screenshots
  # Main Menu
