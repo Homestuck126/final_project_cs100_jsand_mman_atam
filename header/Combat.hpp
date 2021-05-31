@@ -95,7 +95,10 @@ class Combat {
 							break;
 						}
 					}
-				}
+			}
+			else {
+				std::cout << "\nThis Armor is too damaged...\n";
+			}
 			std::cout << std::endl << std::endl;
 			std::cout << "LOOKING FOR WEAPONS" << std::endl;
 			if(rand()%5>=3){
@@ -116,13 +119,19 @@ class Combat {
                                                 }
                                         }
 
-                              	}
+            }
+			else {
+				std::cout << "\nThe weapon broke when it dropped...\n";
+			}
 			std::cout << std::endl << std::endl;
 			std::cout << "LOOKING FOR HEALTH KITS" << std::endl;
 			if(rand()%10>=5){
 				std::cout << player->getLevel()+2<< " Health Kits added!" << std::endl;
 				player->addHeal(player->getLevel()+2);
 				}
+			else {
+				std::cout << "\nNot even a bandage...\n";
+			}
 		}
 		
 
