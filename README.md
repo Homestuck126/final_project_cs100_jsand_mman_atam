@@ -71,7 +71,22 @@ This is the Quest class UML digram, the purpose of this is to create a relations
  > * Plan one more sprint (that you will not necessarily complete before the end of the quarter). Your In-progress and In-testing columns should be empty (you are not doing more work currently) but your TODO column should have a full sprint plan in it as you have done before. This should include any known bugs (there should be some) or new features you would like to add. These should appear as issues/cards on your Kanban board. 
  
  ## Screenshots
- > Screenshots of the input/output after running your application
+ # Main Menu
+ ![Main Menu](https://user-images.githubusercontent.com/81594784/120244714-d9df5900-c21f-11eb-80ac-5a621578b59d.jpg)
+ # Character Creation
+ ![Character Creation](https://user-images.githubusercontent.com/81594784/120244719-dfd53a00-c21f-11eb-8965-5124d784f292.jpg)
+ # World Menu
+ ![Core Menu](https://user-images.githubusercontent.com/81594784/120244729-e5328480-c21f-11eb-8ff0-fe2a820c7f58.jpg)
+ # Movement
+ ![Move](https://user-images.githubusercontent.com/81594784/120244742-ed8abf80-c21f-11eb-932a-e1507079120e.jpg)
+ # Quest Objective
+ ![Check Objective](https://user-images.githubusercontent.com/81594784/120244872-4c503900-c220-11eb-980d-7b52fc99408f.jpg)
+ # Inventory
+ ![Inventory Screen](https://user-images.githubusercontent.com/81594784/120244795-085d3400-c220-11eb-83b0-8b4c8fd739a9.jpg)
+ # Combat
+ ![Combat](https://user-images.githubusercontent.com/81594784/120244759-f8ddeb00-c21f-11eb-9756-f850e0856f6e.jpg)
+ # Looting (Post-Combat)
+ ![Loot](https://user-images.githubusercontent.com/81594784/120244774-fed3cc00-c21f-11eb-8051-8757e12e0a52.jpg)
  ## Installation/Usage
  > Instructions on installing and running your application
  ## Testing
