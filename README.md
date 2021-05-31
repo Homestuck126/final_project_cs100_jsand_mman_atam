@@ -92,7 +92,22 @@ The Menu UML is defined as a parent class with CombatMenu, MoveMenu, and CombatM
  # Looting (Post-Combat)
  ![Loot](https://user-images.githubusercontent.com/81594784/120244774-fed3cc00-c21f-11eb-8051-8757e12e0a52.jpg)
  ## Installation/Usage
- This game must be used on a CMake compatible environment (Linux or an IDE with CMake installed)
+ This game must be used on a CMake compatible environment (Linux or an IDE with CMake installed such as Visual Studio 2019)
+ 
+ Command-Line:
+  * Clone repository into your target directory
+   * Git clone --recursive <URL> 
+  * Run "cmake ." and "make"
+  * Run the game with "./Phantomheart.exe"
+ 
+ Visual Studio:
+ * Open Visual Studio
+ * Clone github repository
+ * Cmake will run automatically if installed
+ * From the Dropdown menu by the Green triangle and select "Phantomheart.exe"
+ * Hit the green triangle once executable is selected
+  
+ 
  ## Testing
  All independent componenents were tested using the google test submodule.
   * Inventory
