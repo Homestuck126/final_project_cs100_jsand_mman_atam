@@ -102,36 +102,35 @@ class CombatMenu : public Menu {
 };
 class CoreMenu : public Menu {
         private:
-		bool moved;
-		MoveMenu *compass;	
-		Map* newMap;
+		MoveMenu *move;	
+		Map* map;
 		Player* player;
-		QuestLog* newQuests;
+		QuestLog* quests;
 	public:
-		bool playerMoved () {return compass->getFlag();}
-
-		CoreMenu (Map* map, QuestLog * quests, Player *p) {
-				compass = new MoveMenu(map);
-				this->newMap = map;
-				this->newQuests = quests;
+		CoreMenu (Map* m, QuestLog * q, Player *p) {
+				move = new MoveMenu(m);
+				this->map = m;
+				this->quests = q;
 				this->player = p;
 				flag = true;
 				}
                 void menu(){
-			std::cout << newMap->getCurrent()->getdescription() +
+			flag = true;
+			std::cout << map->getCurrent()->getdescription() +
 						"\n1 - Move \n2 - Check Objective\n3 - Check Inventory\n4 - Quit Game" << std::endl;
 			  std::cin >> choice;
 				  switch(choice) {
 					case '1':
-						compass->menu();
-															
+						move->menu();
+						if(move->getFlag()){
+							flag = false;
+						}									
 						break;
 					case '2':
-						std::cout << newQuests->getCurrent()->getObj() << std::endl;	
-						
+						std::cout << quests->getCurrent()->getObj() << std::endl;	
 						break;
 					case '3':
-					       player->checkInventory();
+					       	player->checkInventory();
 						break;
 					case '4':
 						flag = false;
@@ -143,7 +142,10 @@ class CoreMenu : public Menu {
 
 		
                 bool getFlag(){
-			if(newQuests->compareQuest(newMap->getCurrent())) {
+			if(quests->compareQuest(map->getCurrent())) {
+					flag = false;
+				}
+			if(player->getCurHP()<=0){
 					flag = false;
 				}
 			return flag; 		
