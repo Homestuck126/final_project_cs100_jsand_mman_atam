@@ -9,10 +9,8 @@ currQuest =0;
 QuestLog::~QuestLog()
 {
 //delete everything
-int size = quests.size();
-for(unsigned i=0; i< size; i++)
-	{
-        delete quests.at(i);
+for(auto i:quests){
+	delete i;
         }
 }
 
@@ -39,20 +37,27 @@ return quests.at(currQuest)->getObj();
 }
 bool QuestLog::compareQuest(Tile* Tile)
 {
+if(this->getCurrent() == nullptr)
+{
+        return true;
+}
 if(Tile == this->getCurrent()->getEnd())
 {
+	std::cout << "=========================================\n";
+	std::cout << "**Quest Update**\n";
         std::cout<<this->getCurrent()->getConclusion()<<std::endl;
         updateQuest();
 }
 if(this->getCurrent() == nullptr)
 {
-        std::cout<< "good job, you followed simple instructions and won this game, be PROUD, celebrate ,go outside. STOP CODING"<<std::endl;
         return true;
 }
 //check quest start
 if(Tile == this->getCurrent()->getStart() && this->getCurrent()->getStatus() != true )
 {
         this->getCurrent()->toggleStatus();
+	std::cout << "=========================================\n";
+        std::cout << "**Quest Update**\n";
         std::cout<<this->getCurrent()->getIntro()<<std::endl;
 }
 return false;

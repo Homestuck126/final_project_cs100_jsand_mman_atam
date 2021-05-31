@@ -4,21 +4,11 @@
 #include "../Quest/Quest.hpp"
 #include "../Quest/Questlog.hpp"
 
-class initialization
+class Initialization
 {
-private: 
-Map* delete_map;
-QuestLog* delete_quest;
-
-
-
-
 public:
-initialization(Map* map_in, QuestLog* quests_in)
+Initialization(Map* map_in, QuestLog* quests_in)
 {
-
-
-
 Tile* beginning = new Tile ("You stand at a bustling space station. The flashing neon signs and the whirr of the air control unit inundates the station. Several teleportation portals lie at the cardinal directions of the room. To the North, lies the way to the blue planet. To the South, the Red. To the West, Rainbow. To the East Green. ", 1);
 Tile* green = new Tile ("Welcome to the Green planet, a verdant planet filled with vegetation. To the West, the portal you just exited from glows with unworldy energies. To the North, a jungle temple towers above the trees. To the South, a massive tree towers over all the rest. To the East, a beam of life shoots up from the planet." ,1);
 Tile* Temple = new Tile("You enter a cobblestone Temple, Moss propogating through out the stone, and Vines growing out of every wall. As you walk in, you see a brazier. You can go South to return to the portal." , 1);
@@ -88,17 +78,6 @@ red=nullptr;
 Man=nullptr;
 Volcano=nullptr;
 River=nullptr;
-this->delete_map = map_in;
-this->delete_quest = quests_in;
 }
 
-
-
-
-
-~initialization()
-{
-    delete delete_map;
-    delete delete_quest;
-}
 };

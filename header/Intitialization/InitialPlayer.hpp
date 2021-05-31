@@ -8,42 +8,38 @@
 
 class InitialPlayer {
 
-private:
-	Player *newPlayer;
-	CharacterFactory *playF;
 public:
-	InitialPlayer(CharacterFactory * makePlayer, Player *player ) {
-	 newPlayer = player;
-	 playF = makePlayer;
-
-	}
-
-	Player* createPlayer() {
+	Player* createPlayer(CharacterFactory* F) {
         int input = 0;
+	bool done = 0;
         std::cout<<"What is your Name" <<std::endl;
         std::string name;
-        std::cin>> name;
-        std::cout<<"Enter the class you wish to be\n 1 - Homeless man\n2 - Ranger\n3 - Riot Raider" <<std::endl;
-        std::cin>>input;
-        switch(input)
-         {
-                case 1:
-                 return newPlayer = playF->getPlayer(name , 0);
-                 break;
-                case 2:
-                return newPlayer = playF->getPlayer(name , 1);
-                break;
-                case 3:
-                return newPlayer = playF->getPlayer(name , 2);
-                break;
-                default:
-                std::cout<<"invalid input"<<std::endl;
-		  }
-		  return nullptr;
+        std::cin.ignore();
+	std::getline(std::cin,name);
+	std::cout << "=========================================\n";
+	while(!done){
+        	std::cout<<"Enter the class you wish to be\n"
+			<<"1 - Homeless man\n       -Medium Armor\n       -Medium Damage\n       -Medium Health\n"
+			<<"2 - Ranger\n       -Light Armor\n       -High Damage\n       -Low Health\n"
+			<<"3 - Riot Raider\n       -Heavy Armor\n       -Low Damage\n       -High Health\n" <<std::endl;
+        	std::cin>>input;
+        	switch(input){
+                	case 1:
+                		return F->getPlayer(name , 0);
+	          		break;
+                	case 2:
+                 		return F->getPlayer(name , 1);
+				break;
+                	case 3:
+                 		return F->getPlayer(name , 2);
+				break;
+                	default:
+                		std::cout<<"invalid input"<<std::endl;
+				break;
+		  	}
 		}
-
-
-	~InitialPlayer() {delete newPlayer; delete playF;}
+	std::cout << "=========================================\n";
+	}
 
 };
 

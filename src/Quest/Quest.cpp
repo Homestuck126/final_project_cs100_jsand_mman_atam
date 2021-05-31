@@ -11,9 +11,9 @@ Qend = endTile;
 }
 Quest::~Quest()
 {
-objective = "";
-intro ="";
-conclude = "";
+objective.clear();
+intro.clear();
+conclude.clear();
 Qstart = nullptr;
 Qend = nullptr;
 }

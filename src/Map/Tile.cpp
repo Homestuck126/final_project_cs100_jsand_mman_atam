@@ -36,7 +36,7 @@ return bottom;
 }
 Tile::~Tile()
 {
-description="";
+description.clear();
 quest =0;
 }
 #endif //__TILE_CPP__
