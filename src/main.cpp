@@ -4,12 +4,15 @@
 #include "../header/Quest/Quest.hpp"
 #include "../header/Intitialization/initialization.hpp"
 #include "../header/Intitialization/InitialPlayer.hpp"
-
 #include "../header/Menu.hpp"
 #include "../header/Combat.hpp"
+
 #include <iostream>
+#include <stdlib.h>
 
 int main(){
+//Prepare RNG for use by seeding with system time
+	srand(time(0));
 //Global Generation Interfaces
 	CharacterFactory *CharCreator = new CharacterFactory();
 	InitialPlayer* pGen = new InitialPlayer();
@@ -22,11 +25,14 @@ int main(){
 	QuestLog* quests = new QuestLog();
 	Player* player = nullptr;
 
+//Interface Object Pointers
+	Menu* worldMenu = nullptr;
+
 //Control Variables
-	char choice = '0';
+	char choice = '0'; //controls main menu
+	bool game_done = false;//indicates game over
 
 //Welcome Message
-
         std::cout << "=========================================\n";
 	std::cout << "Welcome to Phantomheart!\n\n";
 //Start Menu Loop
@@ -35,17 +41,33 @@ int main(){
 		std::cin >> choice;
 		switch(choice){
 			case '1':
-				std::cout<<"\n\n***NEW GAME***\n\n";
+			        std::cout << "\n\n=========================================\n";
+				std::cout<<"***NEW GAME***\n\n";
 				//Reset Game Objects if not first play during run
 				if(player){
-				delete player; delete quests; delete map; delete worldGen;
-				map = new Map(); quests = new QuestLog();
-				}
+					delete player; 
+					delete quests; 
+					delete map; 
+					delete worldGen;
+					delete worldMenu;
+					map = new Map(); 
+					quests = new QuestLog();}
 				//Create new Player
 				std::cout<<"**CHARACTER CREATION**\n\n";
 				player = pGen->createPlayer(CharCreator);
 				//Create Map and Populate Quests
 				worldGen = new Initialization(map, quests);
+				worldMenu = new CoreMenu(map, quests, player);
+				while(!game_done){
+					if(quests->compareQuest(map->getCurrent())){
+						std::cout << player->getName() << " managed to follow orders and have a wonderful time. Good job!\n";
+						game_done = 1;
+					}
+					if(player->getCurHP()<=0){
+						std::cout << player->getName() << " has been beaten. Their adventure is over. What a shame...\n" ;
+						game_done = 1;
+					}
+				}
 				break;
 			case '2':
 				std::cout <<"\n\n\n\nTHANK YOU FOR PLAYING!!!\n";
@@ -68,3 +90,4 @@ int main(){
 
 	return 0;
 }
+

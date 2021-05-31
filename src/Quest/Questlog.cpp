@@ -44,7 +44,6 @@ if(Tile == this->getCurrent()->getEnd())
 }
 if(this->getCurrent() == nullptr)
 {
-        std::cout<< "good job, you followed simple instructions and won this game, be PROUD, celebrate ,go outside. STOP CODING"<<std::endl;
         return true;
 }
 //check quest start
