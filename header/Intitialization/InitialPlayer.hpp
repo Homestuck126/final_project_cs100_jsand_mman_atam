@@ -9,7 +9,7 @@
 class InitialPlayer {
 
 public:
-	void createPlayer(CharacterFactory* F, Player* p) {
+	Player* createPlayer(CharacterFactory* F) {
         int input = 0;
 	bool done = 0;
         std::cout<<"What is your Name" <<std::endl;
@@ -20,16 +20,13 @@ public:
         	std::cin>>input;
         	switch(input){
                 	case 1:
-                		p = F->getPlayer(name , 0);
-				done = 1;
-                 		break;
+                		return F->getPlayer(name , 0);
+	          		break;
                 	case 2:
-                 		p = F->getPlayer(name , 1);
-                		done = 1;
+                 		return F->getPlayer(name , 1);
 				break;
                 	case 3:
-                 		p = F->getPlayer(name , 2);
-                		done = 1;
+                 		return F->getPlayer(name , 2);
 				break;
                 	default:
                 		std::cout<<"invalid input"<<std::endl;

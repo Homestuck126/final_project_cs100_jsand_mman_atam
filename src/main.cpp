@@ -18,8 +18,8 @@ int main(){
 	Initialization* worldGen = nullptr;
 
 //Key Object Pointers
-	Map* map =nullptr;
-	QuestLog* quests = nullptr;
+	Map* map =new Map();
+	QuestLog* quests = new QuestLog();
 	Player* player = nullptr;
 
 //Control Variables
@@ -36,15 +36,16 @@ int main(){
 		switch(choice){
 			case '1':
 				std::cout<<"\n\n***NEW GAME***\n\n";
-				//Clear Previous Game Objects
+				//Reset Game Objects if not first play during run
 				if(player){
 				delete player; delete quests; delete map; delete worldGen;
+				map = new Map(); quests = new QuestLog();
 				}
 				//Create new Player
 				std::cout<<"**CHARACTER CREATION**\n\n";
-				pGen->createPlayer(CharCreator, player);
+				player = pGen->createPlayer(CharCreator);
 				//Create Map and Populate Quests
-				worldGen=new Initialization(map, quests);
+				worldGen = new Initialization(map, quests);
 				break;
 			case '2':
 				std::cout <<"\n\n\n\nTHANK YOU FOR PLAYING!!!\n";
@@ -58,7 +59,12 @@ int main(){
 	std::cin.clear();
 	std::cout << "Press [ENTER] to Exit\n\n";
 	std::cin.ignore(100,'\n');	
+
+
+	//Delete any objects created during runtime
+	if(player){delete player; delete quests; delete map; delete worldGen;}
 	delete pGen; 		//delete Player Initializer
 	delete CharCreator; 	//delete CharacterFactory
+
 	return 0;
 }

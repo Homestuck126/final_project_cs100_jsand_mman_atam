@@ -9,10 +9,8 @@ currQuest =0;
 QuestLog::~QuestLog()
 {
 //delete everything
-int size = quests.size();
-for(unsigned i=0; i< size; i++)
-	{
-        delete quests.at(i);
+for(auto i:quests){
+	delete i;
         }
 }
 

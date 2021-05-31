@@ -12,10 +12,9 @@ current = input;
 Map::~Map()
 {
 //delete everything
-int size = list.size();
-for(unsigned i=0; i< size; i++)
+for(auto i:list)
 {
-	delete list.at(i);
+	delete i;
 }
 }
 bool Map::move(char input)
