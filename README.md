@@ -65,6 +65,14 @@ Player and Non-Player Characters will be created using the basics of the Factory
 
 #### Quest
 This is the Quest class UML digram, the purpose of this is to create a relationship where Questlog contains Quests. We are once again going to gnerate the entire Questlog in the main, and everything will be made in a generate function there. Every Quest will then be generated and inserted into Questlog to allow for easy deletion and interaction. Each Quest will be generated with 2 Tile pointers so that Questlog can communicate with Map and determine when quests are active and when they will start and end. The Questlog will be the main thing to tell the player what to do to win the game. 
+
+#### Menu
+
+![MENU](https://user-images.githubusercontent.com/74107543/120247836-c0430f00-c229-11eb-9bac-fdf81d3a0c5c.png)
+
+The Menu UML is defined as a parent class with CombatMenu, MoveMenu, and CombatMenu inherting from it. Each subclass is responsible for displaying the correct menu to the user and then handling the input it recieves. It provides the basic infrastructure that the client code will use to generate the game components and display to the player. Some menus can be composed of other menus, such as the core menu contains a movmement menu within it. In future expansions of the game, adding a new menu will be easy due to do predefined functionalities shown in this diagram.  
+
+
  
  ## Screenshots
  # Main Menu
