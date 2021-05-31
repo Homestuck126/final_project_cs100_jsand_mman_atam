@@ -72,6 +72,7 @@ int main(){
 						if(rand()%5>=2){
 							battle = new Combat(CharCreator, player);
 							battle->startCombat();
+							delete battle;
 						}
 					}else{
 						std::cout << "Progress was not saved\n";

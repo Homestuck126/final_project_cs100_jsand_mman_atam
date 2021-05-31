@@ -56,7 +56,7 @@ class Combat {
 		}
 		void enemyAttack() {
 			
-			std::cout << enemy->getName() << "tries to attack you!...\n";
+			std::cout << enemy->getName() << " tries to attack you!...\n";
 				if(rand()%7<5){
 					damage = enemy->getDamage()+(rand()%7-3);
 					std::cout << "... and hits for " << damage << " damage!" << std::endl;
