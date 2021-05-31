@@ -4,7 +4,7 @@
 #include "../Quest/Quest.hpp"
 #include "../Quest/Questlog.hpp"
 
-class initialization
+class Initialization
 {
 private: 
 Map* delete_map;
@@ -14,7 +14,7 @@ QuestLog* delete_quest;
 
 
 public:
-initialization(Map* map_in, QuestLog* quests_in)
+Initialization(Map* map_in, QuestLog* quests_in)
 {
 
 
@@ -96,7 +96,7 @@ this->delete_quest = quests_in;
 
 
 
-~initialization()
+~Initialization()
 {
     delete delete_map;
     delete delete_quest;
