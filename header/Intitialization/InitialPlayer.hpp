@@ -12,6 +12,7 @@ public:
 	Player* createPlayer(CharacterFactory* F) {
         int input = 0;
 	      bool done = 0;
+		
         std::cout<<"What is your Name" <<std::endl;
         std::string name;
         std::cin.ignore();
@@ -25,19 +26,20 @@ public:
         	std::cin>>input;
         	switch(input){
                 	case 1:
-                		player= F->getPlayer(name , 0);
+                	return	 F->getPlayer(name , 0);
 	          		break;
                 	case 2:
-                 		player= F->getPlayer(name , 1);
+                 	return	 F->getPlayer(name , 1);
 				break;
                 	case 3:
-                 		player= F->getPlayer(name , 2);
+                 	return	 F->getPlayer(name , 2);
 				break;
                 	default:
                 		std::cout<<"invalid input"<<std::endl;
 				break;
 		  	}
 		}
+		return nullptr;
 	std::cout << "=========================================\n";
 	}
 
