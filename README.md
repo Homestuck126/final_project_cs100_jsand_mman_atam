@@ -29,7 +29,8 @@
 ## Class Diagram
  
 ### Composite Pattern:
-![Composite](https://user-images.githubusercontent.com/81594784/120246433-1497c000-c225-11eb-847d-c915a21b437c.jpg)
+![Composite](https://user-images.githubusercontent.com/60371257/120246826-40677580-c226-11eb-8ce6-99cf9abe93d5.png)
+
 
 
 
@@ -61,7 +62,7 @@ Player and Non-Player Characters will be created using the basics of the Factory
 
 ### No pattern
 
-![Untitled Diagram](https://user-images.githubusercontent.com/60371257/119062742-5bb3c480-b98c-11eb-8e15-206452975ee9.png)
+![Quest](https://user-images.githubusercontent.com/60371257/120246797-2ded3c00-c226-11eb-8179-cbbf964c78cb.png)
 
 #### Quest
 This is the Quest class UML digram, the purpose of this is to create a relationship where Questlog contains Quests. We are once again going to gnerate the entire Questlog in the main, and everything will be made in a generate function there. Every Quest will then be generated and inserted into Questlog to allow for easy deletion and interaction. Each Quest will be generated with 2 Tile pointers so that Questlog can communicate with Map and determine when quests are active and when they will start and end. The Questlog will be the main thing to tell the player what to do to win the game. 
