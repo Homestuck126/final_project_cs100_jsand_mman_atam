@@ -34,7 +34,6 @@ class MoveMenu : public Menu {
 			else return false;
 			}
                 void menu(){
-			while(choice <'1' || choice >'5'){
 				std::cout << "Where would you like to go?\n"
 					<<"1 - West\n"
 					<<"2 - East\n"
@@ -42,28 +41,18 @@ class MoveMenu : public Menu {
 					<<"4 - South\n"
 					<<"5 - Cancel Movement\n";
 				std::cin >> choice;
-				switch(choice){
-					case '1':
-						map->move(choice);
-						break;
-					case '2':
-						map->move(choice);
-						break;
-					case '3':
-						map->move(choice);
-						break;
-					case '4':
-						map->move(choice);
-						flag = true; //just trying to move sets flag
-						break;
-					case '5':	//A quit choice to leave this menu
-						break;
-					default:	//invalid choice 
-						std::cout<<"Bad Choice, try again\n";
-						break;					
+				
+				while(choice < '1' || choice > '5') {
+					std::cout << "Wrong input, try again" << std::endl;
+					std::cin >> choice;
 				}
+				
+				if(choice != '5') {
+				map->move(choice);
+				flag = true;}
 			}
-		}
+					
+		
 };
 
 class CombatMenu : public Menu {
@@ -127,11 +116,13 @@ class CoreMenu : public Menu {
 				flag = true;
 				}
                 void menu(){
+			std::cout << newMap->getCurrent()->getdescription() +
+						"\n1 - Move \n2 - Check Objective\n3 - Check Inventory\n4 - Quit Game" << std::endl;
 			  std::cin >> choice;
 				  switch(choice) {
 					case '1':
 						compass->menu();
-														
+															
 						break;
 					case '2':
 						std::cout << newQuests->getCurrent()->getObj() << std::endl;	

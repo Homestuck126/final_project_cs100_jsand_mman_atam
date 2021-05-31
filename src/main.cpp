@@ -24,6 +24,18 @@ player = play1->createPlayer();
 initialization* generation = new initialization(map,quests);
 
 
+CoreMenu *newCore = new CoreMenu(map, quests, player);
+bool check = true;
+
+while(check) {
+
+	newCore->menu();
+	std::cout << "----" << std::endl;
+	check = newCore->getFlag();		
+
+}
+
+
 /*
 Combat *newCom = new Combat(makePlayer);
 //newCom->startCombat();	
