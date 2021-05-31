@@ -84,7 +84,17 @@ This is the Quest class UML digram, the purpose of this is to create a relations
  # Looting (Post-Combat)
  ![Loot](https://user-images.githubusercontent.com/81594784/120244774-fed3cc00-c21f-11eb-8051-8757e12e0a52.jpg)
  ## Installation/Usage
- > Instructions on installing and running your application
+ This game must be used on a CMake compatible environment (Linux or an IDE with CMake installed)
  ## Testing
- > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
- 
+ All independent componenents were tested using the google test submodule.
+  * Inventory
+  * Character and Player
+  * Quest and Quest Log
+  * Map and MapTiles
+  * Gear Factories
+  * Charactor Factory
+  * Weapons and Armor
+
+Integration Components contained several levels of randomness. These were tested by rigorous play testing. Any bugs encountered were logged and consolidated to be corrected.
+
+Finally the Executable was run using Valgrind throughout development to identify memory leaks and seal them before progressing.
