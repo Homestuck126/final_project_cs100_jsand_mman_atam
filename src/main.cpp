@@ -27,7 +27,7 @@ int main(){
 
 //Interface Object Pointers
 	CoreMenu* menu = nullptr;
-
+	Combat* battle=nullptr;
 //Control Variables
 	char choice = '0'; //controls main menu
 	bool game_done = false;//indicates game over
@@ -69,7 +69,10 @@ int main(){
 						std::cout << player->getName() << " managed to follow orders and have a wonderful time. Good job!\n";
 						game_done = 1;
 					}else if(menu->getMoveFlag()){
-						std::cout << "COMBAT IMPLEMENTED HERE\n";
+						if(rand()%5>=2){
+							battle = new Combat(CharCreator, player);
+							battle->startCombat();
+						}
 					}else{
 						std::cout << "Progress was not saved\n";
 						game_done = 1;
