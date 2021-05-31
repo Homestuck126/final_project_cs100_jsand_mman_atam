@@ -11,7 +11,7 @@ src/Map/Map.cpp
 src/Quest/Quest.cpp
 src/Quest/Questlog.cpp
 )
-ADD_EXECUTABLE(Game 
+ADD_EXECUTABLE(Phantomheart 
 src/main.cpp 
 src/Map/Tile.cpp
 src/Map/Map.cpp
