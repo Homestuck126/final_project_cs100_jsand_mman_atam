@@ -12,7 +12,7 @@ class Map : public Tile
 	Map(Tile*);
 	Map();
 	~Map();
-	bool move(int);
+	bool move(char);
 	Tile* getCurrent();
 	void setLoc(Tile*);
 	void insertTile(Tile*);

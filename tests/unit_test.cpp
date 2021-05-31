@@ -7,7 +7,7 @@
 #include "Tile_test.hpp"
 #include "Quest_test.cpp"
 #include "QuestLog_test.hpp"
-
+#include "CombatTest.hpp"
 
 int main(int argc, char **argv) {
 	::testing::InitGoogleTest(&argc, argv);

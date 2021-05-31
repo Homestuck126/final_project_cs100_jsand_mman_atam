@@ -33,7 +33,8 @@ class Character {
         int getMaxHP(){return max_HP;}                          //Getter funtion for Max Health
         int getCurHP(){return cur_HP;}                          //Getter funtion for Current Health
         int getExperience(){return experience;}                 //Getter funtion for Experience
-        int takeDamage(int incoming){
+        Inventory* getInventory(){return pack;}			//Getter for looting inventory
+	int takeDamage(int incoming){
             cur_HP-=(incoming-(this->getProtection()));
             if(cur_HP<=0){
                 cur_HP=0;
@@ -87,13 +88,17 @@ class Player : public Character {
 	}
 	void swapWeapon(Weapon* wpn){ //Replace equipped weapon with new weapoon
 		std::cout << pack->getWeapon()->getName()<< " discarded!" << std::endl <<std::endl;
-	
+		delete pack->getWeapon();
 		pack->setWeapon(wpn);
+		
+		std::cout<<pack->getWeapon()->getName() << " is now equipped!" <<std::endl;
 	}
 	void swapArmor(Armor* arm){  //Replace equipped armor with new armor
                 std::cout << pack->getArmor()->getName()<< " discarded!" << std::endl <<std::endl;
-
+		delete pack->getArmor();
                 pack->setArmor(arm);
+		
+		std::cout<<pack->getArmor()->getName() << " is now equipped!" <<std::endl;
 	}
 	void addHeal(int amt){	      //Used to increase the number of healing items in player inventory
 		pack->changeHealing(amt);
@@ -110,5 +115,12 @@ class Player : public Character {
 					<<"Health is fully restored\n";
 			}
 		}
+	void checkInventory(){
+		std::cout << "=========================================\n";
+		std::cout << "**"<< name << "'s Inventory**\n";
+		pack->printInventory();
+		std::cout << "=========================================\n";
+	}
+	
 };
 #endif

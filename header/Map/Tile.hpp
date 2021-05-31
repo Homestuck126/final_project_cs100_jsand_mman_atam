@@ -14,7 +14,7 @@ class Tile
 	//enemy object
 	public:
 	Tile();
-	Tile* getNext(int);
+	Tile* getNext(char);
 	Tile(std::string,bool); //enemy object
 	std::string getdescription();
 	void setAdj(Tile* ,Tile*, Tile* ,Tile*);
