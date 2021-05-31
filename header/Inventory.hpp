@@ -43,7 +43,7 @@ class Inventory {
         }
 
         void printInventory(){
-            std::cout<<"Weapon: " << weapon->getName()<< std::endl
+            std::cout<<"\nWeapon: " << weapon->getName()<< std::endl
             <<"\tDamage: " << weapon->getAttackDmg()<< std::endl;
              std::cout<<"Armor: " << armor->getName()<< std::endl
             <<"\tDamage Reduction: " << armor->getProt()<< std::endl;

@@ -116,7 +116,10 @@ class Player : public Character {
 			}
 		}
 	void checkInventory(){
+		std::cout << "=========================================\n";
+		std::cout << "**"<< name << "'s Inventory**\n";
 		pack->printInventory();
+		std::cout << "=========================================\n";
 	}
 	
 };

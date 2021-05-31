@@ -32,25 +32,25 @@ class Combat {
 			delete cMenu;
 		}
 		void startCombat() {
-			std::cout << player->getName() << " is ambushed by an " << enemy->getName() << std::endl;
+			std::cout << "=========================================\n";
+			std::cout << std::endl << std::endl << player->getName() << " is ambushed by an " << enemy->getName() << std::endl;
 			do{
-			this->displayStatus();
-			cMenu->menu();
-			if(enemy->getCurHP()<=0){
-				victory();
-				loot();
-				return;}
-			//enemies turn
-			enemyAttack();
-			if(player->getCurHP()<=0){
-				return;}
+				this->displayStatus();
+				cMenu->menu();
+				if(enemy->getCurHP()<=0){
+					victory();
+					loot();
+					return;}
+				//enemies turn
+				enemyAttack();
+				if(player->getCurHP()<=0){
+					return;}
 			}while(!cMenu->getFlag());
 			return;
 		}
 		
 		
 		void displayStatus(){
-			std::cout << "=========================================\n";
 			std::cout << enemy->getName() << ": " << enemy->getCurHP() << std::endl;
 			std::cout << player->getName()<< ": " << player->getCurHP() << "/" << player->getMaxHP() << std::endl;
 		}
@@ -66,14 +66,16 @@ class Combat {
 
 		}
 		void victory() {
-			std::cout << "The " << enemy->getName() << " was defeated!" << player->getName() << "gained "<< enemy->getExperience() << std::endl;
+			std::cout << "The " << enemy->getName() << " was defeated! " << player->getName() << " gained "<< enemy->getExperience() << "XP!"<< std::endl;
 			player->addXP(enemy->getExperience());
 		}
 		void loot(){
 			char choice = 0;
-			std::cout << "Prepare for loot!\n";
+			std::cout << "=========================================\n";
+			std::cout << "***CHECKING FOR LOOT***\n";
 			std::cout << "Current Inventory:\n";
 			player->checkInventory();
+			std::cout << "LOOKING FOR ARMOR" << std::endl;
 			if(rand()%5>=3){
 				std::cout << "Armor found: " << enemy->getInventory()->getArmor()->getName() << std::endl 
 					<< "Protection : " <<  enemy->getInventory()->getArmorVal() << std::endl;
@@ -91,7 +93,9 @@ class Combat {
 						}
 					}
 				}
+			std::cout << "LOOKING FOR WEAPONS" << std::endl;
 			if(rand()%5>=3){
+				choice = 0;
                                 std::cout << "Weapon found: " << enemy->getInventory()->getWeapon()->getName() << std::endl
                                        << "Damage : " <<  enemy->getInventory()->getWeaponVal() << std::endl;
 				while(choice < '1' || choice > '2'){
@@ -109,6 +113,7 @@ class Combat {
                                         }
 
                               	}
+			std::cout << "LOOKING FOR HEALTH KITS" << std::endl;
 			if(rand()%10>=5){
 				std::cout << player->getLevel()+2<< " Health Kits added!" << std::endl;
 				player->addHeal(player->getLevel()+2);
