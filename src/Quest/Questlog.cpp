@@ -37,6 +37,10 @@ return quests.at(currQuest)->getObj();
 }
 bool QuestLog::compareQuest(Tile* Tile)
 {
+if(this->getCurrent() == nullptr)
+{
+        return true;
+}
 if(Tile == this->getCurrent()->getEnd())
 {
 	std::cout << "=========================================\n";
