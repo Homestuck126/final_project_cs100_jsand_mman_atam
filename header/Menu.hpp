@@ -72,6 +72,7 @@ class CombatMenu : public Menu {
 			this->e=enemy;
 		}
                 void menu(){
+				int damage=0;
 				choice=0;
 				while(choice <'1' || choice >'3'){
 					std::cout <<"What do you do?\n"
@@ -81,9 +82,13 @@ class CombatMenu : public Menu {
 					std::cin >> choice;
 					switch(choice){
 						case '1':
-							std::cout << p->getName() << " attacks " << e->getName() << " for " 
-							<< (p->getDamage() - e->getProtection()) << " damage!\n";
-							e->takeDamage(p->getDamage());
+								std::cout << p->getName() << " attacks " << e->getName() <<"!...\n";
+								if(rand()%7<5){
+								damage = p->getDamage()+(rand()%7-3);
+								std::cout << "... and hits for " << damage << " damage!" << std::endl;
+								e->takeDamage(damage);
+							}else
+								std::cout << "... but missed!\n";
 							break;
 						case '2':
 							std::cout <<"Attempting to Heal 20 HP...\n";
