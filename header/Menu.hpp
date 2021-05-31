@@ -34,6 +34,7 @@ class MoveMenu : public Menu {
 			else return false;
 			}
                 void menu(){
+			std::cout << "=========================================\n";
 				std::cout << "Where would you like to go?\n"
 					<<"1 - West\n"
 					<<"2 - East\n"
@@ -130,8 +131,9 @@ class CoreMenu : public Menu {
 		~CoreMenu(){delete move;}
 
                 void menu(){
-			std::cout << map->getCurrent()->getdescription() +
-						"\n1 - Move \n2 - Check Objective\n3 - Check Inventory\n4 - Quit Game" << std::endl;
+			std::cout << map->getCurrent()->getdescription()<<std::endl;
+                        std::cout << "=========================================\n";
+			std::cout << "What would you like to do?\n1 - Move \n2 - Check Objective\n3 - Check Inventory\n4 - Quit Game" << std::endl;
 			  std::cin >> choice;
 				  switch(choice) {
 					case '1':
@@ -141,7 +143,9 @@ class CoreMenu : public Menu {
 						}									
 						break;
 					case '2':
-						std::cout << quests->getCurrent()->getObj() << std::endl;	
+						std::cout << "=========================================\n";
+						std::cout << "**Current Objective**\n";
+						std::cout << quests->getCurrent()->getObj() << std::endl;
 						break;
 					case '3':
 					       	player->checkInventory();

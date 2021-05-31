@@ -39,6 +39,8 @@ bool QuestLog::compareQuest(Tile* Tile)
 {
 if(Tile == this->getCurrent()->getEnd())
 {
+	std::cout << "=========================================\n";
+	std::cout << "**Quest Update**\n";
         std::cout<<this->getCurrent()->getConclusion()<<std::endl;
         updateQuest();
 }
@@ -50,6 +52,8 @@ if(this->getCurrent() == nullptr)
 if(Tile == this->getCurrent()->getStart() && this->getCurrent()->getStatus() != true )
 {
         this->getCurrent()->toggleStatus();
+	std::cout << "=========================================\n";
+        std::cout << "**Quest Update**\n";
         std::cout<<this->getCurrent()->getIntro()<<std::endl;
 }
 return false;

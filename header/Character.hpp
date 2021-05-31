@@ -88,14 +88,14 @@ class Player : public Character {
 	}
 	void swapWeapon(Weapon* wpn){ //Replace equipped weapon with new weapoon
 		std::cout << pack->getWeapon()->getName()<< " discarded!" << std::endl <<std::endl;
-	
+		delete pack->getWeapon();
 		pack->setWeapon(wpn);
 		
 		std::cout<<pack->getWeapon()->getName() << " is now equipped!" <<std::endl;
 	}
 	void swapArmor(Armor* arm){  //Replace equipped armor with new armor
                 std::cout << pack->getArmor()->getName()<< " discarded!" << std::endl <<std::endl;
-
+		delete pack->getArmor();
                 pack->setArmor(arm);
 		
 		std::cout<<pack->getArmor()->getName() << " is now equipped!" <<std::endl;

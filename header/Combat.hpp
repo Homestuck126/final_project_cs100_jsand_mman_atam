@@ -33,14 +33,17 @@ class Combat {
 		}
 		void startCombat() {
 			std::cout << "=========================================\n";
-			std::cout << std::endl << std::endl << player->getName() << " is ambushed by an " << enemy->getName() << std::endl;
+			std::cout << player->getName() << " is ambushed by an " << enemy->getName() << std::endl;
 			do{
+				std::cout << "=========================================\n";
 				this->displayStatus();
 				cMenu->menu();
+				std::cout << "=========================================\n";
 				if(enemy->getCurHP()<=0){
 					victory();
 					loot();
 					return;}
+			        std::cout << "=========================================\n";
 				//enemies turn
 				enemyAttack();
 				if(player->getCurHP()<=0){
@@ -93,6 +96,7 @@ class Combat {
 						}
 					}
 				}
+			std::cout << std::endl << std::endl;
 			std::cout << "LOOKING FOR WEAPONS" << std::endl;
 			if(rand()%5>=3){
 				choice = 0;
@@ -113,6 +117,7 @@ class Combat {
                                         }
 
                               	}
+			std::cout << std::endl << std::endl;
 			std::cout << "LOOKING FOR HEALTH KITS" << std::endl;
 			if(rand()%10>=5){
 				std::cout << player->getLevel()+2<< " Health Kits added!" << std::endl;
