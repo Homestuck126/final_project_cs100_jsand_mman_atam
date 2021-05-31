@@ -18,7 +18,7 @@ int main(){
 	Initialization* worldGen = nullptr;
 
 //Key Object Pointers
-	Map* map = nullptr;
+	Map* map =nullptr;
 	QuestLog* quests = nullptr;
 	Player* player = nullptr;
 
@@ -40,8 +40,11 @@ int main(){
 				if(player){
 				delete player; delete quests; delete map; delete worldGen;
 				}
+				//Create new Player
 				std::cout<<"**CHARACTER CREATION**\n\n";
-				pGen->
+				pGen->createPlayer(CharCreator, player);
+				//Create Map and Populate Quests
+				worldGen=new Initialization(map, quests);
 				break;
 			case '2':
 				std::cout <<"\n\n\n\nTHANK YOU FOR PLAYING!!!\n";
