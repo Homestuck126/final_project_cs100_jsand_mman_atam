@@ -29,7 +29,8 @@
 ## Class Diagram
  
 ### Composite Pattern:
-![Composite](https://user-images.githubusercontent.com/81594784/120246433-1497c000-c225-11eb-847d-c915a21b437c.jpg)
+![Composite](https://user-images.githubusercontent.com/60371257/120250229-377ca100-c232-11eb-8042-0030565aa746.png)
+
 
 
 
